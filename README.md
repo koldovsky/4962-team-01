@@ -32,3 +32,5 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Andrew Dehtiarov
 - Yevhen Pyrih
 - Liliia Dotsenko
+- Artem Vasylkiv
+- Olha Andriienko
