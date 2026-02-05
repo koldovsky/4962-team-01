@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,30 @@
 </head>
 <body>
     <header class="header">
-        <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
+      <nav
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.header-hero.partial.html"
+      ></div>
     </header>
     <main class="main">
         <a href="product-page.html">Посилання на сторінку продукту (в роботі Stanislav R.)</a>
-        <a href="order-page.html">Посилання на сторінку замовлення (в роботі Anna F.)</a>  <!-- Посилання на сторінку замовлення (в роботі Anna F.) -->
+        <a href="order-page.html">Посилання на сторінку замовлення (в роботі Anna F.)</a>
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="index.coffee-experience.partial.html"
+        ></div>
+        <div
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="subscription.html"
+        ></div>
     </main>
     <footer class="footer">
         
