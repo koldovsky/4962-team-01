@@ -30,6 +30,7 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 
 ## Team
 - Andrew Dehtiarov
+- Artem Vasylkiv
 - Yevhen Pyrih
 - Olha Andriienko
 - Liliia Dotsenko
