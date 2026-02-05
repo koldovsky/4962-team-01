@@ -1,41 +1,78 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop</title>
     <link rel="shortcut icon" href="#" type="image/x-icon">
-    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
     <header class="header">
-      <nav
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.header-nav.partial.html"
-      ></nav>
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.header-hero.partial.html"
-      ></div>
+        <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
+        <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header-hero.partial.html"></div>
     </header>
     <main class="main">
         <a href="product-page.html">Посилання на сторінку продукту (в роботі Stanislav R.)</a>
-        <a href="order-page.html">Посилання на сторінку замовлення (в роботі Anna F.)</a>
-        <div
-          data-hx-trigger="load"
-          data-hx-swap="outerHTML"
-          data-hx-get="index.coffee-experience.partial.html"
+        <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.coffee-experience.partial.html"></div>
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="subscription.html"
         ></div>
         <div
-          data-hx-trigger="load"
-          data-hx-swap="outerHTML"
-          data-hx-get="subscription.html"
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML" 
+            data-hx-get="index.cafe-benefits.partial.html"
         ></div>
     </main>
     <footer class="footer">
-        
+
     </footer>
 </body>
+
+</html>
+      <a href="product-page.html"
+        >Посилання на сторінку продукту (в роботі Stanislav R.)</a
+      >
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.section-testimonials.partial.html"
+      ></section>
+      <a href="product-page.html"
+        >Посилання на сторінку продукту (в роботі Stanislav R.)</a
+      >
+      <a href="order-page.html"
+        >Посилання на сторінку замовлення (в роботі Anna F.)</a
+      >
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.coffee-experience.partial.html"
+      ></div>
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="subscription.html"
+      ></div>
+    </main>
+    <footer class="footer"></footer>
+  </body>
 </html>
