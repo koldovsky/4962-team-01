@@ -2,32 +2,37 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Product Name</title>
-      <link rel="shortcut icon" href="#" type="image/x-icon" />
-      <script
-        src="https://unpkg.com/htmx.org@1.9.10"
-        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-        crossorigin="anonymous"
-      ></script>
-    </head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Name</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- <header>HTMX Запит</header> -->
     <main class="product-details">
-      <ul card="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Store homepage</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link breadcrumbs__link--current" href="#"
-            >Product Name</a
-          >
-        </li>
-      </ul>
+      <nav class="breadcrumbs">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="index.html">Store homepage</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link breadcrumbs__link--current" href="#"
+              >Product Name</a
+            >
+          </li>
+        </ol>
+      </nav>
+      <div class="product-details__content">
+        <section class="product-gallery product-details__gallery"></section>
+        <!-- Роблю галерею блоком бо думаю що буде реюзатись + клас для стилів саме на цій сторінці -->
+        <section class="product-details__info"></section>
+      </div>
       <!-- <section>You might also like...HTMX</section> -->
     </main>
     <!-- <footer>HTMX Запит</footer> -->
