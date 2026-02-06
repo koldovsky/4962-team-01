@@ -52,7 +52,7 @@
           />
           <button
             type="button"
-            class="product-gallery__nav-button product-gallery__nav-button--prev"
+            class="button product-gallery__nav-button product-gallery__nav-button--prev"
             aria-label="Previous image"
           >
             <svg
@@ -73,7 +73,7 @@
           </button>
           <button
             type="button"
-            class="product-gallery__nav-button product-gallery__nav-button--next"
+            class="button product-gallery__nav-button product-gallery__nav-button--next"
             aria-label="Next image"
           >
             <svg
@@ -117,17 +117,66 @@
                 max="99"
               />
             </div>
-            <button type="submit" class="product-details__submit-btn">
+            <button type="submit" class="button product-details__submit-btn">
               Add to cart
             </button>
-            <section class="t">
-              <nav></nav>
-            </section>
           </form>
+          <section class="tabs product-details__tabs">
+            <!-- Tabs -->
+            <nav class="tabs__nav">
+              <button
+                type="button"
+                class="tabs__nav-button tabs__nav-button--active"
+                data-tab-target="#des-tab"
+              >
+                Description
+              </button>
+              <button
+                type="button"
+                class="tabs__nav-button"
+                data-tab-target="#det-tab"
+              >
+                Details
+              </button>
+            </nav>
+            <div class="tabs__content">
+              <div id="des-tab" class="tabs__pane tabs__pane--active">
+                <p class="tabs__description">
+                  A vibrant, citrusy coffee with delicate floral aromas and a
+                  crisp, tea-like body, perfect for slow mornings and pour-over
+                  lovers. Grown at high altitudes, this coffee showcases the
+                  signature bright acidity and fruity complexity that Ethiopian
+                  beans are famous for.
+                </p>
+              </div>
+              <div id="det-tab" class="tabs__pane">
+                <table class="tabs__table">
+                  <tbody>
+                    <tr>
+                      <th>Flavor Notes</th>
+                      <td>Honey</td>
+                    </tr>
+                    <tr>
+                      <th>Origin</th>
+                      <td>Ethiopia</td>
+                    </tr>
+                    <tr>
+                      <th>Roast Level</th>
+                      <td>Light</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
-      <!-- <section>You might also like...HTMX query</section> -->
+      <!-- <section>You might also like...HTMX query with product selection</section> -->
     </main>
-    <!-- <footer>HTMX query</footer> -->
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
   </body>
 </html>
