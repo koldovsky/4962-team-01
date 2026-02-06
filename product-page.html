@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Name</title>
+    <title>SINGLE-ORIGIN COFFEE</title>
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
@@ -28,8 +28,8 @@
             <a class="breadcrumbs__link" href="index.html">Store homepage</a>
           </li>
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link breadcrumbs__link--current" href="#"
-              >Product Name</a
+            <a class="breadcrumbs__link breadcrumbs__link--current" href="#" aria-current="page"
+              >SINGLE-ORIGIN COFFEE</a
             >
           </li>
         </ol>
@@ -49,10 +49,11 @@
             alt="Product thumbnail 1"
             width="100"
             height="100"
+            loading="lazy"
           />
           <button
             type="button"
-            class="product-gallery__nav-button product-gallery__nav-button--prev"
+            class="button product-gallery__nav-button product-gallery__nav-button--prev"
             aria-label="Previous image"
           >
             <svg
@@ -61,6 +62,7 @@
               viewBox="0 0 14 26"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 d="M12.5 2L1.5 13L12.5 24"
@@ -73,7 +75,7 @@
           </button>
           <button
             type="button"
-            class="product-gallery__nav-button product-gallery__nav-button--next"
+            class="button product-gallery__nav-button product-gallery__nav-button--next"
             aria-label="Next image"
           >
             <svg
@@ -82,6 +84,7 @@
               viewBox="0 0 14 26"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 d="M1.5 24L12.5 13L1.5 2"
@@ -93,7 +96,7 @@
             </svg>
           </button>
         </section>
-        <!-- Mixing gallery classes since I assume the gallery might be reused -->
+        <!-- Product info section: gallery thumbnails paired with product details -->
         <section class="product-details__product-info">
           <strong
             class="product-details__availability product-details__availability--in-stock"
@@ -101,9 +104,9 @@
           >
           <h1 class="product-details__title">ETHIOPIAN SUNRISE (021)</h1>
           <span class="product-details__product-code">Product code 37</span>
-          <span class="product-details__price">18,99 USD</span>
+          <span class="product-details__price">$18.99</span>
           <div class="divider product-details__divider"></div>
-          <form class="product-details__actions">
+          <form class="product-details__actions" name="add-to-cart" method="POST" action="/cart">
             <div class="product-details__quantity">
               <label for="product-qty" class="product-details__quantity-label"
                 >Quantity:</label
@@ -117,17 +120,78 @@
                 max="99"
               />
             </div>
-            <button type="submit" class="product-details__submit-btn">
+            <button type="submit" class="button product-details__submit-btn">
               Add to cart
             </button>
-            <section class="t">
-              <nav></nav>
-            </section>
           </form>
+          <section class="tabs product-details__tabs">
+            <!-- Tabs -->
+            <nav class="tabs__nav" role="tablist">
+              <button
+                type="button"
+                class="tabs__nav-button tabs__nav-button--active"
+                data-tab-target="#des-tab"
+                role="tab"
+                aria-selected="true"
+                aria-controls="des-tab"
+              >
+                Description
+              </button>
+              <button
+                type="button"
+                class="tabs__nav-button"
+                data-tab-target="#det-tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="det-tab"
+              >
+                Details
+              </button>
+            </nav>
+            <div class="tabs__content">
+              <div id="des-tab" class="tabs__pane tabs__pane--active" role="tabpanel">
+                <p class="tabs__description">
+                  A vibrant, citrusy coffee with delicate floral aromas and a
+                  crisp, tea-like body, perfect for slow mornings and pour-over
+                  lovers. Grown at high altitudes, this coffee showcases the
+                  signature bright acidity and fruity complexity that Ethiopian
+                  beans are famous for.
+                </p>
+              </div>
+              <div id="det-tab" class="tabs__pane" role="tabpanel">
+                <table class="tabs__table" summary="Coffee product specifications">
+                  <thead>
+                    <tr>
+                      <th>Property</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Flavor Notes</td>
+                      <td>Honey</td>
+                    </tr>
+                    <tr>
+                      <td>Origin</td>
+                      <td>Ethiopia</td>
+                    </tr>
+                    <tr>
+                      <td>Roast Level</td>
+                      <td>Light</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
-      <!-- <section>You might also like...HTMX query</section> -->
+      <!-- <section>You might also like...HTMX query with product selection</section> -->
     </main>
-    <!-- <footer>HTMX query</footer> -->
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
   </body>
 </html>
