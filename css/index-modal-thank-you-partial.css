@@ -1,1 +1,9 @@
 /* by Anna Fedorenko */
+.modal__title,
+.modal__button {
+  font-family: "Oswald", sans-serif;
+}
+
+.modal__subtitle {
+  font-family: "Lato", sans-serif;
+}
