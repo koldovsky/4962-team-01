@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-=======
-<!-- Логвінов Максим -->
->>>>>>> feature/add-yellow-icon
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
     <title>Coffee Shop</title>
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="css/index.css">
-=======
-    <title>Document</title>
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
->>>>>>> feature/add-yellow-icon
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
@@ -23,27 +14,19 @@
   </head>
   <body>
     <header class="header">
-<<<<<<< HEAD
-      <!-- Пиріг Євген -->
-=======
->>>>>>> feature/add-yellow-icon
       <nav
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="global.header-nav.partial.html"
       ></nav>
-<<<<<<< HEAD
       <div
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.header-hero.partial.html"
       ></div>
-=======
->>>>>>> feature/add-yellow-icon
     </header>
 
     <main class="main">
-<<<<<<< HEAD
       <a href="product-page.html"
         >Посилання на сторінку продукту (в роботі Stanislav R.)</a
       >
@@ -51,69 +34,15 @@
       <a href="order-page.html"
         >Посилання на сторінку замовлення (в роботі Anna F.)</a
       >
-      <!--coffe benefits by Viktoriia Hryvniiak-->
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.section-coffee-benefits.partial.html"
-      ></div>
 
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.coffee-facts.partial.html"
-      ></div>
-
-      <!--coffe experience by Artem Vasylkiv-->
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.section-coffee-experience.partial.html"
-      ></div>
-
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.products.partial.html"
-      ></section>
-
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.subscription.partial.html"
-      ></div>
-
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.section-testimonials.partial.html"
-      ></section>
-    </main>
-    <footer
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="global.footer.partial.html"
-    ></footer>
-    <section
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.modal-thank-you.partial.html"
-    >
-      <!--Modal by Anna Fedorenko-->
-    </section>
-=======
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.news.partial.html"
-      >
+      <section class="news-section">
         <div>News, Trends & Coffee Culture.</div>
         <div>
           Discover the latest updates, tips, and exclusive releases from the
           world of specialty coffee.
         </div>
         <img
-          src="/img/cappucino.webp"
+          src="img/cappucino.webp"
           alt="Cappucino"
           width="405"
           height="406"
@@ -151,24 +80,9 @@
             />
           </svg>
         </span>
-        <div
-          class="background-wrapper_RZ2"
-          aria-hidden="true"
-          data-background--hide="false"
-          data-component="background"
-          data-type="color"
-          data-data-loaded="true"
-        >
-          <div
-            class="background_2xT"
-            style="background: #f9cee1"
-            data-role="placeholder"
-            data-selection-container="true"
-          ></div>
-        </div>
 
         <img
-          src="/img/coffee.webp"
+          src="img/coffee.webp"
           alt="Coffee"
           width="405"
           height="406"
@@ -209,12 +123,12 @@
         </span>
 
         <img
-          src="/img/coffeee.webp"
+          src="img/coffeee.webp"
           alt="Cups coffee"
           width="370"
           height="370"
           loading="lazy"
-        />
+         />
         <div>February 15, 2025</div>
         <div>Exclusive Barista Workshop</div>
         <div>
@@ -249,9 +163,55 @@
           </svg>
         </span>
       </section>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.section-coffee-benefits.partial.html"
+      ></div>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.coffee-facts.partial.html"
+      ></div>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.section-coffee-experience.partial.html"
+      ></div>
+
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.products.partial.html"
+      ></section>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.subscription.partial.html"
+      ></div>
+
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.section-testimonials.partial.html"
+      ></section>
     </main>
 
-    <footer class="footer"></footer>
->>>>>>> feature/add-yellow-icon
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.modal-thank-you.partial.html"
+    >
+      </section>
   </body>
 </html>
