@@ -35,8 +35,12 @@ Add the data-proofer-ignore attribute to any tag to ignore it from every check.
 - Olha Andriienko
 - Liliia Dotsenko
 - Viktoria Hryvniak
+<<<<<<< HEAD
 - Vadym Iskryzhytskyi
 - Stanislav Rykun
 - Solomiia Kokoruz
 - Anna Fedorenko
 - Fedyk Lina
+=======
+- Lohvinov Maksym
+>>>>>>> feature/add-yellow-icon
