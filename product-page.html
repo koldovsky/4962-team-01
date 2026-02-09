@@ -1,10 +1,9 @@
-<!-- Stanislav Rykun -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SINGLE-ORIGIN COFFEE</title>
+    <title>SINGLE-ORIGIN COFFEE | Product Page</title>
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="css/product-page.css" />
     <script
@@ -16,179 +15,45 @@
 
   <body>
     <header class="header">
-      <nav
+      <div
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="global.header-nav.partial.html"
-      ></nav>
+      ></div>
     </header>
+
     <main class="product-details">
-      <nav class="breadcrumbs">
-        <ol class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="index.html">Store homepage</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link breadcrumbs__link--current" href="#" aria-current="page"
-              >SINGLE-ORIGIN COFFEE</a
-            >
-          </li>
-        </ol>
-      </nav>
+      <nav
+        class="breadcrumbs"
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.breadcrumbs.partial.html"
+      ></nav>
+
       <div class="product-details__content">
-        <section class="product-gallery product-details__gallery">
-          <img
-            src="img/ethiopian-sunrise-pack.jpg"
-            width="400"
-            height="400"
-            alt="Main product image"
-            class="product-gallery__main-image"
-          />
-          <img
-            class="product-gallery__thumbnail product-gallery__thumbnail--selected"
-            src="img/ethiopian-sunrise-pack.jpg"
-            alt="Product thumbnail 1"
-            width="100"
-            height="100"
-            loading="lazy"
-          />
-          <button
-            type="button"
-            class="button product-gallery__nav-button product-gallery__nav-button--prev"
-            aria-label="Previous image"
-          >
-            <svg
-              width="14"
-              height="26"
-              viewBox="0 0 14 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M12.5 2L1.5 13L12.5 24"
-                stroke="#464C5C"
-                stroke-width="2"
-                stroke-miterlimit="10"
-                stroke-linecap="square"
-              ></path>
-            </svg>
-          </button>
-          <button
-            type="button"
-            class="button product-gallery__nav-button product-gallery__nav-button--next"
-            aria-label="Next image"
-          >
-            <svg
-              width="14"
-              height="26"
-              viewBox="0 0 14 26"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M1.5 24L12.5 13L1.5 2"
-                stroke="#464C5C"
-                stroke-width="2"
-                stroke-miterlimit="10"
-                stroke-linecap="square"
-              ></path>
-            </svg>
-          </button>
-        </section>
-        <!-- Product info section: gallery thumbnails paired with product details -->
-        <section class="product-details__product-info">
-          <strong
-            class="product-details__availability product-details__availability--in-stock"
-            >In stock</strong
-          >
-          <h1 class="product-details__title">ETHIOPIAN SUNRISE (021)</h1>
-          <span class="product-details__product-code">Product code 37</span>
-          <span class="product-details__price">$18.99</span>
-          <div class="divider product-details__divider"></div>
-          <form class="product-details__actions" name="add-to-cart" method="POST" action="/cart">
-            <div class="product-details__quantity">
-              <label for="product-qty" class="product-details__quantity-label"
-                >Quantity:</label
-              >
-              <input
-                type="number"
-                id="product-qty"
-                class="product-details__quantity-input"
-                value="1"
-                min="1"
-                max="99"
-              />
-            </div>
-            <button type="submit" class="button product-details__submit-btn">
-              Add to cart
-            </button>
-          </form>
-          <section class="tabs product-details__tabs">
-            <!-- Tabs -->
-            <nav class="tabs__nav" role="tablist">
-              <button
-                type="button"
-                class="tabs__nav-button tabs__nav-button--active"
-                data-tab-target="#des-tab"
-                role="tab"
-                aria-selected="true"
-                aria-controls="des-tab"
-              >
-                Description
-              </button>
-              <button
-                type="button"
-                class="tabs__nav-button"
-                data-tab-target="#det-tab"
-                role="tab"
-                aria-selected="false"
-                aria-controls="det-tab"
-              >
-                Details
-              </button>
-            </nav>
-            <div class="tabs__content">
-              <div id="des-tab" class="tabs__pane tabs__pane--active" role="tabpanel">
-                <p class="tabs__description">
-                  A vibrant, citrusy coffee with delicate floral aromas and a
-                  crisp, tea-like body, perfect for slow mornings and pour-over
-                  lovers. Grown at high altitudes, this coffee showcases the
-                  signature bright acidity and fruity complexity that Ethiopian
-                  beans are famous for.
-                </p>
-              </div>
-              <div id="det-tab" class="tabs__pane" role="tabpanel">
-                <table class="tabs__table" summary="Coffee product specifications">
-                  <thead>
-                    <tr>
-                      <th>Property</th>
-                      <th>Value</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Flavor Notes</td>
-                      <td>Honey</td>
-                    </tr>
-                    <tr>
-                      <td>Origin</td>
-                      <td>Ethiopia</td>
-                    </tr>
-                    <tr>
-                      <td>Roast Level</td>
-                      <td>Light</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-        </section>
+        <section
+          class="product-gallery product-details__gallery"
+          data-hx-trigger="load"
+          data-hx-swap="outerHTML"
+          data-hx-get="product-page.product-gallery.partial.html"
+        ></section>
+
+        <div class="product-details__product-info">
+          <div
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="product-actions.partial.html"
+          ></div>
+
+          <div
+            data-hx-trigger="load"
+            data-hx-swap="outerHTML"
+            data-hx-get="product-tabs.partial.html"
+          ></div>
+        </div>
       </div>
-      <!-- <section>You might also like...HTMX query with product selection</section> -->
     </main>
+
     <footer
       data-hx-trigger="load"
       data-hx-swap="outerHTML"
