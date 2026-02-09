@@ -1,0 +1,60 @@
+<section class="tabs product-details__tabs">
+  <nav class="tabs__nav" role="tablist">
+    <button
+      type="button"
+      class="tabs__nav-button tabs__nav-button--active"
+      data-tab-target="#des-tab"
+      role="tab"
+      aria-selected="true"
+      aria-controls="des-tab"
+    >
+      Description
+    </button>
+    <button
+      type="button"
+      class="tabs__nav-button"
+      data-tab-target="#det-tab"
+      role="tab"
+      aria-selected="false"
+      aria-controls="det-tab"
+    >
+      Details
+    </button>
+  </nav>
+
+  <div class="tabs__content">
+    <div id="des-tab" class="tabs__pane tabs__pane--active" role="tabpanel">
+      <p class="tabs__description">
+        A vibrant, citrusy coffee with delicate floral aromas and a crisp,
+        tea-like body, perfect for slow mornings and pour-over lovers. Grown at
+        high altitudes, this coffee showcases the signature bright acidity and
+        fruity complexity that Ethiopian beans are famous for.
+      </p>
+    </div>
+
+    <div id="det-tab" class="tabs__pane" role="tabpanel">
+      <table class="tabs__table" summary="Coffee product specifications">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Flavor Notes</td>
+            <td>Honey</td>
+          </tr>
+          <tr>
+            <td>Origin</td>
+            <td>Ethiopia</td>
+          </tr>
+          <tr>
+            <td>Roast Level</td>
+            <td>Light</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

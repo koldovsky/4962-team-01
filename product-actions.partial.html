@@ -1,0 +1,40 @@
+<section class="product-details__product-info">
+  <strong
+    class="product-details__availability product-details__availability--in-stock"
+  >
+    In stock
+  </strong>
+
+  <h1 class="product-details__title">ETHIOPIAN SUNRISE (021)</h1>
+
+  <span class="product-details__product-code">Product code 37</span>
+  <span class="product-details__price">$18.99</span>
+
+  <div class="divider product-details__divider"></div>
+
+  <form
+    class="product-details__actions"
+    name="add-to-cart"
+    hx-post="/cart"
+    hx-swap="none"
+  >
+    <div class="product-details__quantity">
+      <label for="product-qty" class="product-details__quantity-label"
+        >Quantity:</label
+      >
+      <input
+        type="number"
+        id="product-qty"
+        name="quantity"
+        class="product-details__quantity-input"
+        value="1"
+        min="1"
+        max="99"
+      />
+    </div>
+
+    <button type="submit" class="button product-details__submit-btn">
+      Add to cart
+    </button>
+  </form>
+</section>
