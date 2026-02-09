@@ -1,4 +1,6 @@
 /* by Anna Fedorenko */
+@import url(global.css);
+
 .modal__title,
 .modal__button {
   font-family: "Oswald", sans-serif;
