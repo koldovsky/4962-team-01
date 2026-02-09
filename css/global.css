@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background: #fcfcfc; */
+}
+
+
+:root {
+  scroll-behavior: smooth;
+  background-color: #fcfcfc;
+  --primary-color: #f9cee1;
+  --main-color: #12462b;
+  --header-link-color: #0b462899;
+  --primary-highlight-color: #e07faa;
+  --secondary-highlight-color: #fef9dc;
+}
+
+/* img {
+  display: block;
+  width: 100%;
+} */
+
+.button {
+  background-color: var(--primary-highlight-color);
+  color: white;
+  font:
+    16.5px Lato,
+    sans-serif;
+  font-weight: 650;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 18px 40px;
+  margin: 30px 0;
+} /* Yevhen Pyrih */
