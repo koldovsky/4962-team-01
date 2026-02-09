@@ -1,0 +1,50 @@
+@import url(global.css);
+
+.header__hero {
+  padding: 15px 12%;
+}
+
+.header__hero-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  max-width: 95%;
+}
+
+.header__hero-content {
+  max-width: 500px;
+  margin: 20px;
+  background-color: var(--main-color);
+}
+.header__hero-title {
+  font:
+    62px Oswald,
+    sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 1000;
+}
+
+.header__title-dot {
+  color: var(--secondary-highlight-color);
+}
+
+.header__description {
+  font:
+    19px Lato,
+    sans-serif;
+  color: var(--secondary-highlight-color);
+  font-weight: 750;
+  margin: 30px 0;
+}
+
+.header__hero-image {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  box-shadow: none;
+}
