@@ -6,29 +6,212 @@
     <title>Coffee Shop</title>
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://unpkg.com/htmx.org@1.9.10" crossorigin="anonymous"></script>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
-      <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header-hero.partial.html"></div>
+      <nav
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="global.header-nav.partial.html"
+      ></nav>
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.header-hero.partial.html"
+      ></div>
     </header>
 
     <main class="main">
-      <a href="product-page.html">Посилання на сторінку продукту (в роботі Stanislav R.)</a>
-      <a href="order-page.html">Посилання на сторінку замовлення (в роботі Anna F.)</a>
+      <a href="product-page.html"
+        >Посилання на сторінку продукту (в роботі Stanislav R.)</a
+      >
 
-      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.news.partial.html"></section>
+      <a href="order-page.html"
+        >Посилання на сторінку замовлення (в роботі Anna F.)</a
+      >
 
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.section-coffee-benefits.partial.html"></div>
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.coffee-facts.partial.html"></div>
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.section-coffee-experience.partial.html"></div>
-      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.products.partial.html"></section>
-      <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.subscription.partial.html"></div>
-      <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.section-testimonials.partial.html"></section>
+      <section class="news-section">
+        <div>News, Trends & Coffee Culture.</div>
+        <div>
+          Discover the latest updates, tips, and exclusive releases from the
+          world of specialty coffee.
+        </div>
+        <img
+          src="img/cappucino.webp"
+          alt="Cappucino"
+          width="405"
+          height="406"
+          loading="lazy"
+        />
+        <div>MARCH 5,2025</div>
+        <div>New Release: Ethiopian Sunrise</div>
+        <div>
+          Our latest addition, Ethiopian Sunrise, brings bright citrus notes and
+          a smooth floral finish—perfect for pour-over lovers!
+        </div>
+        <span
+          role="img"
+          aria-label="Arrow"
+          style="
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #f9cee1;
+            border-radius: 50%;
+            padding: 6px;
+            color: #12462b;
+          "
+        >
+          <svg
+            viewBox="0 0 100 100"
+            width="100%"
+            height="100%"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <polygon
+              points="24.84,0 100,0 100,75.16 75.229,99.931 75.229,42.817 19.037,98.938 0.849,80.75 56.83,24.771 0,24.771 24.84,0"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+
+        <img
+          src="img/coffee.webp"
+          alt="Coffee"
+          width="405"
+          height="406"
+          loading="lazy"
+        />
+        <div>February 28, 2025</div>
+        <div>Master the Art of Cold Brew</div>
+        <div>
+          Learn how to make the perfect cold brew with our step-by-step guide
+          and discover the best beans for a refreshing, smooth taste.
+        </div>
+
+        <span
+          role="img"
+          aria-label="Arrow"
+          style="
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #fef9dc;
+            border-radius: 50%;
+            padding: 6px;
+            color: #12462b;
+          "
+        >
+          <svg
+            viewBox="0 0 100 100"
+            width="100%"
+            height="100%"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <polygon
+              points="24.84,0 100,0 100,75.16 75.229,99.931 75.229,42.817 19.037,98.938 0.849,80.75 56.83,24.771 0,24.771 24.84,0"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+
+        <img
+          src="img/coffeee.webp"
+          alt="Cups coffee"
+          width="370"
+          height="370"
+          loading="lazy"
+         />
+        <div>February 15, 2025</div>
+        <div>Exclusive Barista Workshop</div>
+        <div>
+          Step up your coffee game with our expert-led barista workshop! Learn
+          latte art, brewing techniques, and taste exclusive blends.
+        </div>
+
+        <span
+          role="img"
+          aria-label="Arrow"
+          style="
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #12462b66;
+            border-radius: 50%;
+            padding: 6px;
+            color: #12462b;
+          "
+        >
+          <svg
+            viewBox="0 0 100 100"
+            width="100%"
+            height="100%"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <polygon
+              points="24.84,0 100,0 100,75.16 75.229,99.931 75.229,42.817 19.037,98.938 0.849,80.75 56.83,24.771 0,24.771 24.84,0"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </section>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.section-coffee-benefits.partial.html"
+      ></div>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.coffee-facts.partial.html"
+      ></div>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.section-coffee-experience.partial.html"
+      ></div>
+
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.products.partial.html"
+      ></section>
+
+      <div
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.subscription.partial.html"
+      ></div>
+
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.section-testimonials.partial.html"
+      ></section>
     </main>
 
-    <footer data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></footer>
-    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.modal-thank-you.partial.html"></section>
+    <footer
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
+
+    <section
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="index.modal-thank-you.partial.html"
+    >
+      </section>
   </body>
 </html>
