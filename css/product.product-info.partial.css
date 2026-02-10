@@ -1,6 +1,7 @@
 .product-details__product-info-wrap {
   display: flex;
   width: 100%;
+  gap: var(--space-lg);
   flex-direction: column;
   .product-details__product-info {
     display: flex;

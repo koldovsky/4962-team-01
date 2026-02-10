@@ -11,9 +11,10 @@
 .product-details__content {
   display: flex;
   flex-direction: column;
+  gap: var(--space-lg);
 
   @media (min-width: 768px) {
     flex-direction: row;
-    gap: 12px;
+    gap: var(--space-sm);
   }
 }
