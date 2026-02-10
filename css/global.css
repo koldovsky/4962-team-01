@@ -40,5 +40,14 @@ img {
   text-decoration: none;
   border-radius: 10px;
   padding: 18px 40px;
-  margin: 30px 0;
+  /* margin: 30px 0; */ /* Відступи краще контролювати на рівні компонентів, а не глобально SR*/
 } /* Yevhen Pyrih */
+
+.button--arrow-nav { 
+  background: none;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        
+}
+

@@ -6,9 +6,10 @@
   .product-gallery__main-image-wrap {
     display: flex;
     align-items: center;
-    width: 100%;
     position: relative;
     .product-gallery__main-image {
+      aspect-ratio: 1 / 1;
+      width: 100%;
       height: auto;
       object-fit: cover;
     }
@@ -21,10 +22,7 @@
       top: 50%;
       transform: translateY(-50%);
       .product-gallery__nav-button { /* можливо винести у глобал як button--gallery-nav ?*/
-        background: rgba(255, 255, 255, 0.8);
-        border: none;
-        padding: 8px 16px;
-        cursor: pointer;
+        background: none;
       }
     }
   }
@@ -33,8 +31,10 @@
     gap: 8px;
     .product-gallery__thumbnail {
       width: 13%;
+      aspect-ratio: 1 / 1;
       height: auto;
       object-fit: cover;
+      flex-shrink: 0;
       cursor: pointer;
       &.product-gallery__thumbnail--selected {
         border: 1px solid var(--black-border-color);
