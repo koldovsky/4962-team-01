@@ -2,3 +2,13 @@
 @import "global.css";
 @import "global.header-nav.partial.css";
 @import "global.footer.partial.css";
+@import "global.breadcrumbs.partial.css";
+@import "product.product-gallery.partial.css";
+@import "product.product-actions.partial.css";
+@import "product.product-tabs.partial.css";
+
+/* тимчасовий обмежувач поки не визначений .container */
+.product-details {
+  max-width: 1200px;
+  margin: 0 auto;
+}
