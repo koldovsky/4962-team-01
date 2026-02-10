@@ -22,10 +22,10 @@
   --link-color: #4e72d0;
 }
 
-/* img {
+img {
   display: block;
   width: 100%;
-} */
+}
 
 .button {
   background-color: var(--primary-highlight-color);
