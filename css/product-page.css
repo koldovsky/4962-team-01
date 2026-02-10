@@ -4,7 +4,16 @@
 @import "global.footer.partial.css";
 @import "global.breadcrumbs.partial.css";
 @import "product.product-gallery.partial.css";
-@import "product.product-actions.partial.css";
+@import "product.product-info.partial.css";
 @import "product.product-tabs.partial.css";
 
 
+.product-details__content {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 12px;
+  }
+}

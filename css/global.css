@@ -20,6 +20,9 @@
   --primary-highlight-color: #e07faa;
   --secondary-highlight-color: #fef9dc;
   --link-color: #4e72d0;
+  --black-border-color: #000000;
+  --accent-green: #61a854;
+  --accent-red: #d9534f;
 }
 
 img {
