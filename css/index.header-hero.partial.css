@@ -45,7 +45,7 @@
         color: var(--primary-color);
         margin-bottom: 1vh;
         text-transform: uppercase;
-        font-weight: 1000;
+        font-weight: 900;
         /* word-break: break-word; */
         line-height: 1.1;
 
@@ -59,7 +59,7 @@
           19px Lato,
           sans-serif;
         color: var(--secondary-highlight-color);
-        font-weight: 750;
+        font-weight: 700;
         margin: 3vh 0;
       }
     }

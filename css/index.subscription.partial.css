@@ -13,7 +13,7 @@
 .subscription__title {
   font-family: "Oswald", sans-serif;
   font-size: 28px;
-  color: #12462b;
+  color: var(--main-color);
   text-align: center;
   text-transform: uppercase;
 }
@@ -157,7 +157,7 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: #e07faa;
+  color: var(--primary-highlight-color);
   font-size: 20px;
   line-height: 1;
   top: 50%;
