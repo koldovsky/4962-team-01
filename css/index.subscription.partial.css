@@ -1,0 +1,261 @@
+/* By Solomiia Kokoruz - Mobile First до 480px */
+
+.subscription {
+  padding: 40px 16px;
+  background-color: #fcfcfc;
+}
+
+.subscription__container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.subscription__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  color: #12462b;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subscription__title-accent {
+  color: var(--primary-highlight-color);
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.subscription__title-accent::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--main-color);
+  margin-left: 2px;
+}
+
+
+.subscription__subtitle {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+
+.subscription__packages {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.subscription__package {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.subscription__package-image {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 16px;
+  border-radius: 4px;
+  display: block;
+  object-fit: cover;
+}
+
+.subscription__package-name {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.subscription__package-price {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.subscription__price-value {
+  color: var(--primary-highlight-color);
+  font-weight: 600;
+}
+
+.subscription__details {
+  border-bottom: 1px solid rgba(18, 70, 43, 0.2);
+  text-align: center;
+}
+
+.subscription__details-summary {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  color: var(--secondary-text-color);
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(18, 70, 43, 0.2);
+  position: relative;
+}
+
+.subscription__details[open] .subscription__details-summary {
+  border-bottom: none;
+}
+
+.subscription__details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.subscription__details-summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  transform: translateY(-50%) rotate(45deg);
+  transition: 0.3s;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-left: 0;
+}
+
+.subscription__details[open] .subscription__details-summary::after {
+  transform: translateY(-50%) rotate(225deg);
+}
+
+.subscription__details-list {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.subscription__details-item {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  color: #666;
+  padding: 6px 0 6px 25px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.subscription__details-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #e07faa;
+  font-size: 20px;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.subscription__form-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--main-color);
+  padding: 24px 0;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 24px;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+.subscription__form {
+  background-color: var(--main-color);
+  background-image: url(https://res2.weblium.site/res/67c9a4285aab271b674e6ab9/67d159ab3a5eac110e807f5b?nowebp);
+  background-position: 54.37% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 24px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transform: scale(1);
+}
+
+.subscription__form-group {
+  width: 100%;
+}
+
+.subscription__input {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.subscription__input::placeholder {
+  color: #999;
+}
+
+.subscription__input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(224, 127, 170, 0.3);
+}
+
+
+.subscription__button {
+  width: 100%;
+  padding: 12px 16px;
+  margin-top: 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-highlight-color);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.subscription__button:hover {
+  background-color: var(--primary-highlight-hover-color);
+}
+
+.subscription__button:active {
+  background-color: #cc4a86;
+}
+
+.subscription__footer-img {
+  margin-top: 32px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.subscription__stripe-img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
