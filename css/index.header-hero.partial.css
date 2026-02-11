@@ -1,50 +1,85 @@
-@import url(global.css);
-
 .header__hero {
-  padding: 15px 12%;
-}
-
-.header__hero-inner {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--main-color);
-  max-width: 95%;
-}
-
-.header__hero-content {
-  max-width: 500px;
-  margin: 20px;
-  background-color: var(--main-color);
-}
-.header__hero-title {
-  font:
-    62px Oswald,
-    sans-serif;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  font-weight: 1000;
-}
-
-.header__title-dot {
-  color: var(--secondary-highlight-color);
-}
-
-.header__description {
-  font:
-    19px Lato,
-    sans-serif;
-  color: var(--secondary-highlight-color);
-  font-weight: 750;
-  margin: 30px 0;
-}
-
-.header__hero-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  overflow: hidden;
-  box-shadow: none;
+  justify-content: center;
+  align-items: center;
+
+  .header__hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    max-width: 100%;
+    width: 85vw;
+    height: auto;
+    padding: 1vh 2vw;
+    overflow: hidden;
+
+    @media(min-width: 768px) {
+      width: 69vw;
+      flex-direction: row;
+      padding: 2vh 5vw;
+    }
+
+    @media(min-width: 2560px) {
+      width: 50vw;
+    }
+
+    .header__hero-content {
+      max-width: 100%;
+      width: 75vw;
+      margin: 1vh 2vw;
+      background-color: var(--main-color);
+
+      @media (min-width: 768px) {
+        max-width: 50%;
+        margin: 0 1vw;
+      }
+
+      .header__hero-title {
+        font:
+          62px Oswald,
+          sans-serif;
+        color: var(--primary-color);
+        margin-bottom: 1vh;
+        text-transform: uppercase;
+        font-weight: 1000;
+        /* word-break: break-word; */
+        line-height: 1.1;
+
+        .header__title-dot {
+          color: var(--secondary-highlight-color);
+        }
+      }
+
+      .header__description {
+        font:
+          19px Lato,
+          sans-serif;
+        color: var(--secondary-highlight-color);
+        font-weight: 750;
+        margin: 3vh 0;
+      }
+    }
+
+    .header__hero-image {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        transform: translateX(50%) scale(2);
+        max-width: 50%;
+        height: 75%;
+        width: auto;
+        margin: 0 1vw;
+      }
+
+      @media (min-width: 1024px) {
+        transform: translateX(10%) translateY(10%);
+      }
+    }
+  }
 }

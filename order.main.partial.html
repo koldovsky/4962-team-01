@@ -1,28 +1,39 @@
 <section class="order">
-    <div class="order__success">
-        <h1>THANK YOU FOR YOUR ORDER!</h1>
-        <picture>
-            <img src="img/coffee-pattern.svg" alt="decorative pattern" />
+  <div class="order__success">
+    <h1 class="order__success-title">THANK YOU FOR YOUR ORDER!</h1>
+    <picture class="order__success-picture">
+      <img src="img/coffee-pattern.svg" alt="decorative pattern" />
+    </picture>
+  </div>
+  <div class="order__container">
+    <div class="order__items">
+      <div class="order__header">#000003</div>
+      <div class="order__content">
+        <picture class="order__content-picture">
+          <img
+            src="img/order_page_guatemalan_mist.png"
+            alt="GUATEMALAN MIST"
+            class="order__product-image"
+          />
         </picture>
-    </div>
-    <div class="order__container">
-        <div class="order__items">
-            <div class="order__header">#000003</div>
-            <div class="order__item">
-                <img src="img/order_page_guatemalan_mist.png" alt="GUATEMALAN MIST" class="order__product-image">
-                <div class="order__product-info">
-                    <h3>GUATEMALAN MIST</h3>
-                    <p>1x <span class="order__price">19.49USD</span></p>
-                </div>
-                <p class="order__total">Total: <span class="order__price">19.49USD</span></p>
-            </div>
+
+        <div class="order__product-info">
+          <h3 class="order__product-name">GUATEMALAN MIST</h3>
+          <p class="order__product-quantity">
+            1x <span class="order__product-price">19.49USD</span>
+          </p>
         </div>
-        <div class="order__customer-details">
-            <h3>Customer details</h3>
-            <p>Name: Name</p>
-            <p>Email: example@email.com</p>
-            <p>Phone: 123456789</p>
-            <p>Comment: Comment</p>
-        </div>
+        <p class="order__total">
+          Total: <span class="order__price">19.49USD</span>
+        </p>
+      </div>
     </div>
+    <div class="order__customer-details">
+      <h3 class="order__customer-title">Customer details</h3>
+      <p class="order__customer-name">Name: Name</p>
+      <p class="order__customer-email">Email: example@email.com</p>
+      <p class="order__customer-phone">Phone: 123456789</p>
+      <p class="order__customer-comment">Comment: Comment</p>
+    </div>
+  </div>
 </section>

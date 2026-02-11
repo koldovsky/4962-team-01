@@ -1,0 +1,45 @@
+.product-details__gallery {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+  .product-gallery__main-image-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .product-gallery__main-image {
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .product-gallery__arrows {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      .product-gallery__nav-button {
+        /* можливо винести у глобал як button--gallery-nav ?*/
+        background: none;
+      }
+    }
+  }
+  .product-gallery__thumbnails {
+    display: flex;
+    gap: 8px;
+    .product-gallery__thumbnail {
+      width: 13%;
+      aspect-ratio: 1 / 1;
+      height: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+      cursor: pointer;
+      &.product-gallery__thumbnail--selected {
+        border: 1px solid var(--black-border-color);
+      }
+    }
+  }
+}

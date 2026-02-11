@@ -1,6 +1,9 @@
 @import url(global.css);
-@import url(index-modal-thank-you-partial.css); /* by Anna Fedorenko */
+@import url(components.css);
 @import url(global.header-nav.partial.css); /* by Yevhen Pyrih */
 @import url(index.header-hero.partial.css); /* by Yevhen Pyrih */
+@import url(index-modal-thank-you-partial.css); /* by Anna Fedorenko */
 @import url(index.section-coffee-benefits.partial.css); /* by Viktoriia Hryvniak */
 @import url(index.coffee-facts.partial.css); /* by Viktoriia Hryvniak */
+@import url(index.subscription.partial.css); /* by Solomiia Kokoruz */
+@import url(index.section-testimonials.partial.css) /* by Vadym Iskryzhytskyi */

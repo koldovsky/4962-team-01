@@ -1,0 +1,25 @@
+.product-details__product-info-wrap {
+  display: flex;
+  width: 100%;
+  gap: var(--space-lg);
+  flex-direction: column;
+  .product-details__product-info {
+    display: flex;
+    flex-direction: column;
+    .product-details__availability {
+      color: var(--main-color);
+      font-weight: 600;
+      &.product-details__availability--in-stock {
+        color: var(--accent-green);
+      }
+      &.product-details__availability--out-of-stock {
+        color: var(--accent-red);
+      }
+    }
+    .product-details__product-code {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--main-color);
+    }
+  }
+}

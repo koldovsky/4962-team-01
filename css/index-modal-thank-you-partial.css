@@ -1,11 +1,9 @@
 /* by Anna Fedorenko */
-@import url(global.css);
-
-.modal__title,
-.modal__button {
+.modal-thank-you__title,
+.modal-thank-you__button {
   font-family: "Oswald", sans-serif;
 }
 
-.modal__subtitle {
+.modal-thank-you__subtitle {
   font-family: "Lato", sans-serif;
 }
