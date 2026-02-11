@@ -1,4 +1,4 @@
-/* By Solomiia Kokoruz - Mobile First до 480px */
+/* By Solomiia Kokoruz */
 
 .subscription {
   padding: 40px 16px;
@@ -33,7 +33,6 @@
   margin-left: 2px;
 }
 
-
 .subscription__subtitle {
   font-family: "Lato", sans-serif;
   font-size: 14px;
@@ -43,7 +42,6 @@
   margin-bottom: 32px;
   line-height: 1.5;
 }
-
 
 .subscription__packages {
   display: flex;
@@ -132,7 +130,6 @@
   position: absolute;
   right: 16px;
   top: 50%;
-  margin-left: 0;
 }
 
 .subscription__details[open] .subscription__details-summary::after {
@@ -182,7 +179,7 @@
 
 .subscription__form {
   background-color: var(--main-color);
-  background-image: url(https://res2.weblium.site/res/67c9a4285aab271b674e6ab9/67d159ab3a5eac110e807f5b?nowebp);
+  background-image: url("https://res2.weblium.site/res/67c9a4285aab271b674e6ab9/67d159ab3a5eac110e807f5b?nowebp");
   background-position: 54.37% 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -191,7 +188,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  transform: scale(1);
 }
 
 .subscription__form-group {
@@ -220,7 +216,6 @@
   background-color: #fff;
   box-shadow: 0 0 0 2px rgba(224, 127, 170, 0.3);
 }
-
 
 .subscription__button {
   width: 100%;
