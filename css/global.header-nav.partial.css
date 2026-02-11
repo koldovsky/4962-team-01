@@ -19,9 +19,7 @@
         background-color: var(--primary-color);
 
         @media (max-width: 1023px) {
-            visibility: hidden;
-            height: 0;
-            padding: 0;
+            display: none;
         }
 
         .header__contact-info {
@@ -70,23 +68,21 @@
         max-height: 1216;
 
         .header__menu {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-items: center;
-            padding: 0 15px;
-            margin: 30px 25px;
-            gap: 0px 25px;
-            visibility: hidden;
-            width: 0;
-            height: 0;
+                list-style: none;
+                display: none;
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: center;
+                gap: 0px 25px;
 
-            @media(min-width: 1024px) {
-                visibility: visible;
-                width: auto;
-                height: auto;
-            }
+                @media (min-width: 1024px) {
+                    display: flex;
+                    padding: 0 15px;
+                    margin: 30px 25px;
+                    visibility: visible;
+                    width: auto;
+                    height: auto;
+                }
 
             .header__menu-link {
                 font: 15px Lato, sans-serif;
