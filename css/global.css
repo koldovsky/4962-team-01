@@ -41,20 +41,6 @@ html, body {
   overflow-x: hidden;
 } /*Додав щоб позбавитися зайвого місця на мобільних девайсах*/
 
-.button {
-  background-color: var(--primary-highlight-color);
-  color: white;
-  font:
-    16.5px Lato,
-    sans-serif;
-  font-weight: 650;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 2% 2.5%;
-  display: inline-block;
-  /* margin: 30px 0; */ /* Відступи краще контролювати на рівні компонентів, а не глобально SR*/
-} /* Yevhen Pyrih */
-
 .button--arrow-nav { 
   background: none;
         border: none;

@@ -1,4 +1,5 @@
 @import url(global.css);
+@import url(components.css);
 @import url(index-modal-thank-you-partial.css); /* by Anna Fedorenko */
 @import url(global.header-nav.partial.css); /* by Yevhen Pyrih */
 @import url(index.header-hero.partial.css); /* by Yevhen Pyrih */
