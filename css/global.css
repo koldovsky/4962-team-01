@@ -13,7 +13,9 @@
 
 :root {
   scroll-behavior: smooth;
-  background-color: #fcfcfc;
+  background-color: var(--background-color);
+  --background-color: #fcfcfc;
+  --white-color: #ffffff;
   --primary-color: #f9cee1;
   --main-color: #12462b;
   --header-link-color: #0b462899;
@@ -33,13 +35,13 @@ img {
   max-width: 100%;
 }
 
-html, body {
+/* html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-} /*Додав щоб позбавитися зайвого місця на мобільних девайсах*/
+} Додав щоб позбавитися зайвого місця на мобільних девайсах */
 
 .button--arrow-nav { 
   background: none;
