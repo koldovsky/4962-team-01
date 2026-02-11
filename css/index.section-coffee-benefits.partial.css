@@ -1,14 +1,26 @@
 /* by Viktoriia Hryvniak */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.chess-pattern__image {
+  width: 100%;
+  height: 32px;
+  object-fit: cover;
+}
+
+.benefits-section__icon {
+  justify-content: center;
+  align-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+}
 .benefits-section__title {
   color: #12462b;
   font-family: "Lato", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
 .benefits-section__text {
   color: #8b9b93;
   font-family: "Lato", sans-serif;
-  font-size: 14px;
-}   
+  font-size: 0.875rem;
+}
+
