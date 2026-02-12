@@ -1,10 +1,16 @@
+/* =========================
+   FOOTER BASE
+========================= */
+
 .footer {
   background: var(--main-color);
   color: var(--secondary-highlight-color);
   font-family: "Lato", sans-serif;
 }
 
-/* ===== CONTAINER ===== */
+/* =========================
+   CONTAINER
+========================= */
 
 .footer__container {
   max-width: 1180px;
@@ -12,7 +18,13 @@
   padding: 60px 20px 30px;
 }
 
-/* ===== GRID ===== */
+/* =========================
+   GRID (mobile-first)
+========================= */
+
+/* =========================
+   GRID (mobile-first)
+========================= */
 
 .footer__top {
   display: grid;
@@ -20,13 +32,21 @@
   gap: 50px;
 }
 
-@media (min-width: 992px) {
+/* ===== 4 КОЛОНКИ (от планшета и выше) ===== */
+@media (min-width: 768px) {
+  .footer__top {
+    grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    column-gap: 40px;
+  }
+}
+
+/* ===== DESKTOP (шире и свободнее) ===== */
+@media (min-width: 1200px) {
   .footer__top {
     grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-    column-gap: 50px; /* расстояние между Navigation и Quick Links */
+    column-gap: 50px;
   }
 
-  /* сближаем центральные колонки */
   .footer__nav:first-of-type {
     justify-self: end;
     margin-right: 20px;
@@ -36,19 +56,34 @@
     justify-self: start;
   }
 
-  /* увеличиваем расстояние до Contacts */
   .footer__contacts {
     margin-left: 25px;
   }
-}
 
-@media (min-width: 992px) {
   .footer__contacts .footer__contact-item:first-of-type {
     margin-top: 26px;
   }
 }
 
-/* ===== BRAND ===== */
+/* ===== MOBILE ONLY ===== */
+@media (max-width: 767px) {
+  .footer__top {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .footer__social-list {
+    justify-content: center;
+  }
+
+  .footer__contacts {
+    text-align: center;
+  }
+}
+
+/* =========================
+   BRAND
+========================= */
 
 .footer__logo {
   display: inline-block;
@@ -56,7 +91,7 @@
 }
 
 .footer__logo img {
-  width: 150px;   /* подгони под макет */
+  width: 150px;
   height: auto;
   display: block;
 }
@@ -68,7 +103,9 @@
   margin-bottom: 18px;
 }
 
-/* ===== SOCIAL ===== */
+/* =========================
+   SOCIAL
+========================= */
 
 .footer__social-list {
   display: flex;
@@ -84,7 +121,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: filter 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .footer__social-link svg {
@@ -102,13 +139,13 @@
   stroke-width: 2;
 }
 
-
 .footer__social-link:hover {
   background: #c9578d;
 }
 
-
-/* ===== TITLES ===== */
+/* =========================
+   TITLES
+========================= */
 
 .footer__title {
   font-family: "Oswald", sans-serif;
@@ -121,7 +158,9 @@
   text-transform: uppercase;
 }
 
-/* ===== LINKS ===== */
+/* =========================
+   LINKS
+========================= */
 
 .footer__list {
   list-style: none;
@@ -130,7 +169,7 @@
 }
 
 .footer__item {
-  margin-bottom: 16px; /* увеличенный вертикальный ритм */
+  margin-bottom: 16px;
 }
 
 .footer__link {
@@ -144,7 +183,9 @@
   color: var(--primary-color);
 }
 
-/* ===== CONTACTS ===== */
+/* =========================
+   CONTACTS
+========================= */
 
 .footer__contacts {
   font-style: normal;
@@ -175,7 +216,9 @@
   line-height: 1.6;
 }
 
-/* ===== DIVIDER ===== */
+/* =========================
+   DIVIDER
+========================= */
 
 .footer__divider {
   margin: 50px 0 20px;
@@ -183,50 +226,25 @@
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ===== BOTTOM ===== */
+/* =========================
+   BOTTOM
+========================= */
 
+/* По умолчанию — в строку */
 .footer__bottom {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
   font-size: 15px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.45);
 }
 
-/* ===== DESKTOP BOTTOM ===== */
-
-@media (min-width: 992px) {
+/* Только на узком мобильном — в колонку */
+@media (max-width: 767px) {
   .footer__bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
-
-  .footer__contacts .footer__title {
-    margin-bottom: 46px;
-  }
-}
-
-/* ===== MOBILE ===== */
-
-@media (max-width:  767px) {
-  .footer__top {
-    text-align: center;
-  }
-
-  .footer__top > * {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .footer__social-list {
-    justify-content: center;
-  }
-
-  .footer__contacts {
+    flex-direction: column;
+    gap: 6px;
     text-align: center;
   }
 }
