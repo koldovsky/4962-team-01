@@ -1,13 +1,28 @@
 /* by Viktoriia Hryvniak */
+:root {
+  --color-bg-section: #fdfdfd;
+  --color-card-1-bg: #fdfdfd;
+  --color-card-2-bg: #f8fffc;
+  --color-card-3-bg: #fff7fa;
+
+  --color-border: #f9cee1;
+  --color-title: #12462b;
+  --color-text: #8b9b93;
+  --color-accent-1: ;
+  --color-accent-2: #1f4d3a;
+  --color-accent-3: #e27db0;
+}
+
+
 .coffee-facts__title {
-  color: #12462b;
+  color: var(--color-title);
   font-family: "Oswald", sans-serif;
   font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .coffee-facts__text {
-  color: #8b9b93;
+  color: var(--color-text);
   font-family: "Lato", sans-serif;
   font-size: 17px;
 }
-
