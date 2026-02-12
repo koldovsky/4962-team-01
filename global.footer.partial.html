@@ -1,95 +1,146 @@
 <footer class="footer">
-  <section class="footer__top">
-    <section class="footer__brand">
-      <h2 class="footer__logo">BREW</h2>
+  <div class="footer__container">
+    <section class="footer__top">
+      <!-- BRAND -->
+      <section class="footer__brand">
+        <a href="/" class="footer__logo">
+          <img src="img/brew-logo-light.webp" alt="Brew Coffee logo" />
+        </a>
 
-      <p class="footer__description">
-        Freshly roasted coffee, delivered with care.<br />
-        Taste the difference in every cup.
-      </p>
+        <p class="footer__description">
+          Freshly roasted coffee, delivered with care. Taste the difference in
+          every cup.
+        </p>
 
-      <nav class="footer__social" aria-label="Social media">
-        <ul class="footer__social-list">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">Facebook</a>
+        <nav class="footer__social" aria-label="Social media">
+          <ul class="footer__social-list">
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M15 3h-3c-2.5 0-4 1.5-4 4v3H6v3h2v8h4v-8h3l1-3h-4V8c0-.8.3-1 1-1h2V3z"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <!-- Instagram -->
+            <li>
+              <a
+                href="#"
+                class="footer__social-link footer__social-link--outline"
+                aria-label="Instagram"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" />
+                </svg>
+              </a>
+            </li>
+
+            <!-- YouTube -->
+            <li>
+              <a href="#" class="footer__social-link" aria-label="YouTube">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M21.8 8s-.2-1.4-.8-2a2.9 2.9 0 0 0-2-0.9C16.2 5 12 5 12 5h0s-4.2 0-7 .1a2.9 2.9 0 0 0-2 .9c-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.6C2 14.4 2.2 16 2.2 16s.2 1.4.8 2a2.9 2.9 0 0 0 2 .9c2.8.1 7 .1 7 .1s4.2 0 7-.1a2.9 2.9 0 0 0 2-.9c.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.6C22 9.6 21.8 8 21.8 8zM10 14.8V9.2l5 2.8-5 2.8z"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <!-- Twitter / X -->
+            <li>
+              <a href="#" class="footer__social-link" aria-label="Twitter">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22 5.92c-.77.34-1.6.57-2.46.67a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.29 4.29 0 0 0-7.3 3.91A12.17 12.17 0 0 1 3 4.79a4.29 4.29 0 0 0 1.33 5.72 4.26 4.26 0 0 1-1.94-.54v.05a4.29 4.29 0 0 0 3.44 4.21 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.98A8.6 8.6 0 0 1 2 19.54 12.14 12.14 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.36-.01-.53A8.34 8.34 0 0 0 22 5.92z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- NAVIGATION -->
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <h3 class="footer__title">Navigation</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">About Us</a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">Instagram</a>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Products</a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">YouTube</a>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Testimonials</a>
           </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#">Twitter</a>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Latest News</a>
           </li>
         </ul>
       </nav>
+
+      <!-- QUICK LINKS -->
+      <nav
+        class="footer__nav footer__nav--quick-links"
+        aria-label="Quick links"
+      >
+        <h3 class="footer__title">Quick Links</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Shipping &amp; Returns</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Privacy Policy</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Terms &amp; Conditions</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Orders &amp; Returns</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CONTACTS -->
+      <address class="footer__contacts">
+        <h3 class="footer__title">Contacts</h3>
+
+        <p class="footer__contact-item">
+          <span class="footer__label">Phone:</span>
+          <a class="footer__contact-link" href="tel:+12345678900">
+            +1 (234) 567 89 00
+          </a>
+        </p>
+
+        <p class="footer__contact-item">
+          <span class="footer__label">Email:</span>
+          <a class="footer__contact-link" href="mailto:brew.coffee@email.com">
+            brew.coffee@email.com
+          </a>
+        </p>
+
+        <p class="footer__contact-item">
+          <span class="footer__label">Address:</span>
+          170 S 1st St, Brooklyn,<br />
+          NY 11211, USA
+        </p>
+      </address>
     </section>
 
-    <nav class="footer__nav" aria-label="Footer navigation">
-      <h3 class="footer__title">Navigation</h3>
-      <ul class="footer__list">
-        <li class="footer__item">
-          <a class="footer__link" href="#">About Us</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Products</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Testimonials</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Latest News</a>
-        </li>
-      </ul>
-    </nav>
+    <hr class="footer__divider" />
 
-    <nav class="footer__nav footer__nav--quick-links" aria-label="Quick links">
-      <h3 class="footer__title">Quick Links</h3>
-      <ul class="footer__list">
-        <li class="footer__item">
-          <a class="footer__link" href="#">Shipping &amp; Returns</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Privacy Policy</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Terms &amp; Conditions</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Orders &amp; Returns</a>
-        </li>
-      </ul>
-    </nav>
-
-    <address class="footer__contacts">
-      <h3 class="footer__title">Contacts</h3>
-
-      <p class="footer__contact-item">
-        Phone:
-        <a class="footer__contact-link" href="tel:+12345678900">
-          +1 (234) 567 89 00
-        </a>
-      </p>
-
-      <p class="footer__contact-item">
-        Email:
-        <a class="footer__contact-link" href="mailto:brew.coffee@email.com">
-          brew.coffee@email.com
-        </a>
-      </p>
-
-      <p class="footer__address">
-        170 S 1st St, Brooklyn,<br />
-        NY 11211, USA
-      </p>
-    </address>
-  </section>
-
-  <hr class="footer__divider" />
-
-  <section class="footer__bottom">
-    <p class="footer__copyright">&copy; Created by</p>
-    <p class="footer__rights">All rights Reserved</p>
-  </section>
+    <section class="footer__bottom">
+      <p class="footer__copyright">&copy; Created by</p>
+      <p class="footer__rights">All rights Reserved</p>
+    </section>
+  </div>
 </footer>
