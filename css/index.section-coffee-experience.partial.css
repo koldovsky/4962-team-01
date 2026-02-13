@@ -8,11 +8,11 @@
     .coffee-experience__text {
       color: var(--subtitle-color);
     }
-    .coffee-experience__features {
+    .coffee-experience__features__text {
       color: var(--subtitle-color);
-      .coffee-experience__features__accent {
-        color: var(--main-color);
-      }
+    }
+    .coffee-experience__features__accent {
+      color: var(--main-color);
     }
   }
 }
