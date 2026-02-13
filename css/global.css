@@ -13,28 +13,42 @@
 
 :root {
   scroll-behavior: smooth;
-  background-color: #fcfcfc;
+  background-color: var(--background-color);
+  --background-color: #fcfcfc;
+  --white-color: #ffffff;
   --primary-color: #f9cee1;
   --main-color: #12462b;
   --header-link-color: #0b462899;
   --primary-highlight-color: #e07faa;
   --secondary-highlight-color: #fef9dc;
+  --link-color: #4e72d0;
+  --black-border-color: #000000;
+  --accent-green: #61a854;
+  --accent-red: #d9534f;
+  --subtitle-color: #8b9b93;
+  --space-sm: 12px;
+  --space-lg: 24px;
+  --secondary-text-color: #8b9b93;
 }
 
-/* img {
+img {
   display: block;
-  width: 100%;
-} */
+  max-width: 100%;
+}
 
-.button {
-  background-color: var(--primary-highlight-color);
-  color: white;
-  font:
-    16.5px Lato,
-    sans-serif;
-  font-weight: 650;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 18px 40px;
-  margin: 30px 0;
-} /* Yevhen Pyrih */
+/* html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} Додав щоб позбавитися зайвого місця на мобільних девайсах */
+
+.button--arrow-nav { 
+  background: none;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        
+}
+

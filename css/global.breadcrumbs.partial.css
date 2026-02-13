@@ -1,0 +1,24 @@
+.breadcrumbs__list {
+  display: flex;
+  flex-direction: column;
+  color: var(--link-color);
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+    flex-wrap: wrap; /* Дозволяємо перенос, якщо назв багато */
+    align-items: center;
+  }
+
+  .breadcrumbs__item {
+    list-style: none;
+    &:not(:last-child)::after {
+      content: ">";
+      padding: 0 8px;
+    }
+  }
+
+  .breadcrumbs__link {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+}
