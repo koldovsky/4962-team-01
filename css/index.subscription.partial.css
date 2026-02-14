@@ -2,7 +2,7 @@
 
 .subscription {
   padding: 40px 16px;
-  background-color: #fcfcfc;
+  background-color: var(--background-color);
 }
 
 .subscription__container {
@@ -13,7 +13,7 @@
 .subscription__title {
   font-family: "Oswald", sans-serif;
   font-size: 28px;
-  color: #12462b;
+  color: var(--main-color);
   text-align: center;
   text-transform: uppercase;
 }
@@ -51,7 +51,7 @@
 }
 
 .subscription__package {
-  background-color: #fff;
+  background-color: var(--background-color);
   border-radius: 8px;
   padding: 20px 16px;
   text-align: center;
@@ -92,7 +92,7 @@
 }
 
 .subscription__details {
-  border-bottom: 1px solid rgba(18, 70, 43, 0.2);
+  border-bottom: 1px solid var(--subtitle-color);
   text-align: center;
 }
 
@@ -107,7 +107,7 @@
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  border-bottom: 1px solid rgba(18, 70, 43, 0.2);
+  border-bottom: 1px solid var(--subtitle-color);
   position: relative;
 }
 
@@ -147,7 +147,7 @@
 .subscription__details-item {
   font-family: "Lato", sans-serif;
   font-size: 13px;
-  color: #666;
+  color: var(--main-color);
   padding: 6px 0 6px 25px;
   position: relative;
   line-height: 1.4;
@@ -157,7 +157,7 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: #e07faa;
+  color: var(--);
   font-size: 20px;
   line-height: 1;
   top: 50%;
@@ -171,7 +171,7 @@
   text-align: center;
   color: var(--main-color);
   padding: 24px 0;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--background-color);
   margin-bottom: 24px;
   line-height: 1.3;
   letter-spacing: 0.5px;
@@ -202,19 +202,19 @@
   font-weight: 400;
   border: none;
   border-radius: 4px;
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--white-color);
+  color: var(--black-border-color);
   transition: background-color 0.2s ease;
 }
 
 .subscription__input::placeholder {
-  color: #999;
+  color: var(---color);
 }
 
 .subscription__input:focus {
   outline: none;
-  background-color: #fff;
-  box-shadow: 0 0 0 2px rgba(224, 127, 170, 0.3);
+  background-color: var(--white-color);
+  box-shadow: 0 0 0 2px var(--primary-color)(224, 127, 170, 0.3);
 }
 
 .subscription__button {
@@ -227,7 +227,7 @@
   border: none;
   border-radius: 4px;
   background-color: var(--primary-highlight-color);
-  color: #ffffff;
+  color: var(--white-color);
   cursor: pointer;
   transition: background-color 0.2s ease;
   text-transform: uppercase;
@@ -239,7 +239,7 @@
 }
 
 .subscription__button:active {
-  background-color: #cc4a86;
+  background-color: var(--primary-highlight-color-color);
 }
 
 .subscription__footer-img {

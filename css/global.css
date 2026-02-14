@@ -10,7 +10,6 @@
   /* background: #fcfcfc; */
 }
 
-
 :root {
   scroll-behavior: smooth;
   background-color: var(--background-color);
@@ -31,6 +30,17 @@
   --secondary-text-color: #8b9b93;
   --green-border-color: #e2e9e5;
   --line-color: #f2f2f2;
+  --coffee-facts-color-frame: #f9cee1;
+  --coffee-facts-color-title: #1f4d3c;
+  --coffee-facts-color-text: #6b7a78;
+  --coffee-facts-color-bg-1: #fffdf3;
+  --coffee-facts-color-bg-2: #f8fffc;
+  --coffee-facts-color-bg-3: #fff7fa;
+  --coffee-facts-divider-1: #eae4be;
+  --coffee-facts-divider-2: #12462b;
+  --coffee-facts-divider-3: #e07faa;
+  --coffee-benefits-title-color: #12462b;
+  --coffee-benefits-text-color: #8b9b93;
 }
 
 img {
@@ -46,11 +56,9 @@ img {
   overflow-x: hidden;
 } Додав щоб позбавитися зайвого місця на мобільних девайсах */
 
-.button--arrow-nav { 
+.button--arrow-nav {
   background: none;
-        border: none;
-        padding: 8px 16px;
-        cursor: pointer;
-        
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
 }
-
