@@ -1,8 +1,115 @@
 /* by Anna Fedorenko */
-.order__success-title {
-  font-family: "Oswald", sans-serif;
-}
+.order {
+  padding: 60px 24px 90px 24px;
 
-.order__container {
-  font-family: "Lato", sans-serif;
+  .order__success {
+    .order__success-title {
+      font-family: "Oswald", sans-serif;
+      color: var(--main-color);
+      font-size: 28px;
+    }
+
+    .order__success-picture {
+      display: flex;
+      overflow: hidden;
+      justify-content: flex-start;
+      margin-top: 15px;
+
+      .order__success-img {
+        object-fit: cover;
+        width: 100%;
+        height: 32px;
+      }
+    }
+  }
+  .order__container {
+    font-family: "Lato", sans-serif;
+    color: var(--subtitle-color);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0px 0px 0px;
+
+    .order__items {
+      display: block;
+      border-color: var(--green-border-color);
+      border-style: solid;
+      border-width: 2.3px;
+      border-radius: 8px;
+      padding: 28px 20px 28px 20px;
+
+      .order__header {
+        color: var(--subtitle-color);
+        font-size: 19px;
+        margin-bottom: 16px;
+        display: block;
+        text-align: left;
+        font-weight: 700;
+      }
+
+      .order__content {
+        display: flex;
+        margin-bottom: 8px;
+        align-items: center;
+        flex-direction: row;
+        row-gap: 8px;
+        border-bottom: 1px solid var(--line-color);
+        padding-bottom: 10px;
+
+          .order__product-image {
+            max-width: 100%;
+            height: 46px;
+            object-fit: cover;
+            padding-right: 12px;
+          }
+
+          .order__product-name {
+            font-size: 17px;
+            text-align: left;
+            max-width: 100%;
+          }
+
+        .order__product-quantity {
+          font-size: 17px;
+          text-align: right;
+          display: block;
+          margin-left: auto;
+
+          .order__product-price {
+            padding-left: 16px;
+          }
+        }
+      }
+
+      .order__total {
+        .order__price {
+        }
+      }
+    }
+
+    .order__customer-details {
+      display: block;
+      border-color: var(--green-border-color);
+      border-style: solid;
+      border-width: 2.3px;
+      border-radius: 8px;
+      padding: 28px 20px 28px 20px;
+
+      .order__customer-title {
+      }
+
+      .order__customer-name {
+      }
+
+      .order__customer-email {
+      }
+
+      .order__customer-phone {
+      }
+
+      .order__customer-comment {
+      }
+    }
+  }
 }
