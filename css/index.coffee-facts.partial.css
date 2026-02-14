@@ -1,9 +1,12 @@
+/* by Viktoriia Hryvniak */
 .coffee-facts {
   display: grid;
   gap: 24px;
   padding: 40px 16px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   align-items: stretch;
+  width: 100%;
+  max-width: none;
 }
 
 .coffee-facts__card {
@@ -13,16 +16,20 @@
   text-align: center;
   padding: 20px 16px;
   border: 10px solid var(--coffee-facts-color-frame);
-  width: auto;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
   height: auto;
 }
 
 .coffee-facts__card:nth-child(1) {
   background-color: var(--coffee-facts-color-bg-1);
 }
+
 .coffee-facts__card:nth-child(2) {
   background-color: var(--coffee-facts-color-bg-2);
 }
+
 .coffee-facts__card:nth-child(3) {
   background-color: var(--coffee-facts-color-bg-3);
 }
@@ -30,9 +37,11 @@
 .coffee-facts__card:nth-child(1) .coffee-facts__divider {
   background-color: var(--coffee-facts-divider-1);
 }
+
 .coffee-facts__card:nth-child(2) .coffee-facts__divider {
   background-color: var(--coffee-facts-divider-2);
 }
+
 .coffee-facts__card:nth-child(3) .coffee-facts__divider {
   background-color: var(--coffee-facts-divider-3);
 }
@@ -46,8 +55,9 @@
 }
 
 .coffee-facts__image {
+  max-width: 100%;
+  height: auto;
   max-height: 100%;
-  width: auto;
 }
 
 .coffee-facts__title {
@@ -58,10 +68,11 @@
   letter-spacing: 0.02em;
   color: var(--coffee-facts-color-title);
   margin-bottom: 8px;
-  min-height: 64px;
+  min-height: 48px;
 }
+
 .coffee-facts__divider {
-  width: 40px;
+  width: 60px;
   height: 4px;
   background-color: var(--coffee-facts-color-frame);
   margin-bottom: 16px;
@@ -73,8 +84,8 @@
   line-height: 1.7;
   color: var(--coffee-facts-color-text);
   margin-top: auto;
-  max-width: 90%;
-  width: clamp(220px, 80%, 280px);
+  width: 100%;
+  max-width: 280px;
   margin-left: auto;
   margin-right: auto;
   overflow-wrap: break-word;
@@ -92,5 +103,13 @@
     grid-template-columns: repeat(3, 1fr);
     max-width: 1180px;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 489px) {
+  .coffee-facts {
+    grid-template-columns: 1fr;
+    padding: 24px 12px;
+    box-sizing: border-box;
   }
 }

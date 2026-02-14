@@ -27,7 +27,6 @@
   --subtitle-color: #8b9b93;
   --space-sm: 12px;
   --space-lg: 24px;
-<<<<<<< HEAD
   --secondary-text-color: #8b9b93;
   --coffee-facts-color-frame: #f9cee1;
   --coffee-facts-color-title: #1f4d3c;
@@ -38,10 +37,9 @@
   --coffee-facts-divider-1: #eae4be;
   --coffee-facts-divider-2: #12462b;
   --coffee-facts-divider-3: #e07faa;
+  --coffee-benefits-title-color: #12462b;
+  --coffee-benefits-text-color: #8b9b93;
 }
-=======
- }
->>>>>>> 0247179275709ab280fa6df9740fb9a4d200dc10
 
 img {
   display: block;
