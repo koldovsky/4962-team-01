@@ -2,7 +2,6 @@
 .order {
   padding: 60px 24px 90px 24px;
 
-  /* Success section */
   .order__success {
     .order__success-title {
       font-family: "Oswald", sans-serif;
@@ -61,6 +60,7 @@
       min-width: 0;
       width: 100%;
       max-width: 100%;
+      overflow: hidden; /* Додано */
 
       @media (min-width: 768px) {
         flex: 2;
@@ -82,7 +82,8 @@
         align-items: center;
         border-bottom: 1px solid var(--line-color);
         padding-bottom: 10px;
-        gap: 16px;
+        gap: 8px; /* Зменшено gap */
+        min-width: 0; /* Додано */
 
         @media (min-width: 768px) {
           margin-bottom: 8px;
@@ -94,14 +95,16 @@
         .order__product-image {
           max-width: 100%;
           height: 46px;
+          width: 46px; /* Додано фіксовану ширину */
           object-fit: cover;
           padding-right: 12px;
+          flex-shrink: 0;
         }
 
         .order__product-name {
           font-size: 17px;
           font-weight: 445;
-          flex: 1 1 auto;
+          flex: 1 1 0;
           min-width: 0;
           overflow: hidden;
           white-space: nowrap;
@@ -110,13 +113,12 @@
           @media (min-width: 768px) {
             text-align: left;
             max-width: 100%;
-            flex: initial;
           }
         }
 
         .order__product-quantity {
           font-size: 17px;
-          margin-left: 12px;
+          margin-left: 0; /* Змінено з 12px */
           flex: 0 0 auto;
           white-space: nowrap;
 
@@ -127,7 +129,7 @@
           }
 
           .order__product-price {
-            padding-left: 16px;
+            padding-left: 8px; /* Зменшено з 16px */
           }
         }
       }
@@ -140,6 +142,7 @@
         padding-top: 10px;
         font-size: 19px;
         font-weight: 700;
+        flex-wrap: wrap; /* Додано */
       }
     }
 
