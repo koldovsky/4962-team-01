@@ -10,6 +10,10 @@
   /* background: #fcfcfc; */
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+
 :root {
   scroll-behavior: smooth;
   background-color: var(--background-color);
