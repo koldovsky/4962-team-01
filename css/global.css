@@ -20,6 +20,7 @@
   --font-heading: "Oswald", sans-serif; /* Заголовки */
   --background-color: #fcfcfc;
   --secondary-background-color: #ffffff;
+  --white-color: #ffffff;
   --primary-color: #f9cee1;
   --main-color: #12462b;
   --header-link-color: #0b462899;
@@ -66,7 +67,7 @@ body {
   -webkit-font-smoothing: antialiased; /* Робить шрифт чіткішим на Mac */
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -75,4 +76,4 @@ h6 {
   font-family: var(--font-heading);
   color: var(--main-color);
   -webkit-font-smoothing: antialiased;
-}
+} */

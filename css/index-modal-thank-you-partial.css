@@ -73,7 +73,7 @@
         width: 100%;
         max-width: 210px;
         height: 40px;
-        background-color: var(--modal-svg-border-color);
+        background-color: var(--coffee-facts-color-frame);
         border: none;
         cursor: pointer;
         display: flex;
