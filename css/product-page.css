@@ -1,10 +1,12 @@
 /* CSS Product page by S.Rykun */
 @import "global.css";
+@import "components.css";
 @import "global.header-nav.partial.css";
 @import "global.footer.partial.css";
 @import "global.breadcrumbs.partial.css";
+@import "index.products.partial.css";
 @import "product.product-gallery.partial.css";
 @import "product.product-info.partial.css";
 @import "product.product-tabs.partial.css";
 @import "product.page-content.partial.css";
-@import "index.products.partial.css";
+@import "product.you-might-also-like.partial.css";
