@@ -48,3 +48,12 @@
 
 }
 
+.coffee-experience__features {
+  list-style: none;
+}
+
+
+.coffee-experience__content {
+  background-color: var(--secondary-highlight-color);
+  padding: 24px;
+}
