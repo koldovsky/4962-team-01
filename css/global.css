@@ -7,7 +7,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* background: #fcfcfc; */
 }
 
 /* * {
@@ -16,11 +15,14 @@
 
 :root {
   scroll-behavior: smooth;
+<<<<<<< HEAD
   background-color: var(--background-color);
   --font-body: "Lato", sans-serif; /* Боді текст */
   --font-heading: "Oswald", sans-serif; /* Заголовки */
+=======
+>>>>>>> e31665127428f7421d3f19b246f62397c5e007b6
   --background-color: #fcfcfc;
-  --white-color: #ffffff;
+  --secondary-background-color: #ffffff;
   --primary-color: #f9cee1;
   --main-color: #12462b;
   --header-link-color: #0b462899;
@@ -54,13 +56,11 @@ img {
   max-width: 100%;
 }
 
-/* html, body {
+html, body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-} Додав щоб позбавитися зайвого місця на мобільних девайсах */
+  background-color: var(--background-color);
+}
 
 body {
   font-family: var(--font-body); /* Глобальний шрифт для всього сайту */
