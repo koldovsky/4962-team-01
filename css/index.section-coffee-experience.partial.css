@@ -1,0 +1,23 @@
+.coffee-experience__title {
+  color: var(--main-color);
+}
+
+.coffee-experience__accent {
+  color: var(--primary-highlight-color);
+}
+
+.coffee-experience__lead {
+  color: var(--subtitle-color);
+}
+
+.coffee-experience__text {
+  color: var(--subtitle-color);
+}
+
+.coffee-experience__features__text {
+  color: var(--subtitle-color);
+}
+
+.coffee-experience__features__accent {
+  color: var(--main-color);
+}
