@@ -1,4 +1,4 @@
-/* CSS Order page by S.Rykun */
+/* CSS Product page by S.Rykun */
 @import "global.css";
 @import "global.header-nav.partial.css";
 @import "global.footer.partial.css";
@@ -6,15 +6,4 @@
 @import "product.product-gallery.partial.css";
 @import "product.product-info.partial.css";
 @import "product.product-tabs.partial.css";
-
-
-.product-details__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-lg);
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    gap: var(--space-sm);
-  }
-}
+@import "product.page-content.partial.css";

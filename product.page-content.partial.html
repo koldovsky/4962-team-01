@@ -1,0 +1,28 @@
+<nav
+  class="breadcrumbs"
+  data-hx-trigger="load"
+  data-hx-swap="outerHTML"
+  data-hx-get="global.breadcrumbs.partial.html"
+></nav>
+<div class="product-details__content">
+  <section
+    class="product-gallery product-details__gallery"
+    data-hx-trigger="load"
+    data-hx-swap="outerHTML"
+    data-hx-get="product.product-gallery.partial.html"
+  ></section>
+
+  <div class="product-details__product-info-wrap">
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="product.product-info.partial.html"
+    ></div>
+
+    <div
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="product.product-tabs.partial.html"
+    ></div>
+  </div>
+</div>
