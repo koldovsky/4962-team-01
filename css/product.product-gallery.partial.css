@@ -21,10 +21,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      .product-gallery__nav-button {
-        /* можливо винести у глобал як button--gallery-nav ?*/
-        background: none;
-      }
     }
   }
   .product-gallery__thumbnails {
