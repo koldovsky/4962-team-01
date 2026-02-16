@@ -21,3 +21,30 @@
 .coffee-experience__features__accent {
   color: var(--main-color);
 }
+
+.chess-pattern {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.coffee-experience__inner {
+  padding: 24px;
+  padding-top: 64px;
+  padding-bottom: 0px;
+}
+
+.coffee-experience__button {
+  background-color: var(--primary-highlight-color);
+  color: white;
+  font:
+    16.5px Lato,
+    sans-serif;
+  font-weight: 650;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 2% 2.5%;
+  display: inline-block;
+
+}
+
