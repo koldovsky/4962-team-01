@@ -62,7 +62,7 @@
 
     .header__main {
         justify-content: space-between;
-        background-color: var(--white-color);
+        background-color: var(--secondary-background-color);
         width: 100%;
         height: auto;
         max-height: 1216;

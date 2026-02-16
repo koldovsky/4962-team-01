@@ -1,26 +1,72 @@
 /* by Viktoriia Hryvniak */
-.chess-pattern__image {
+.benefits-section {
+  padding: 48px 16px;
+}
+
+.chess-pattern {
   width: 100%;
-  height: 32px;
-  object-fit: cover;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.chess-pattern__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.benefits-section__list {
+  display: grid;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-section__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .benefits-section__icon {
-  justify-content: center;
-  align-items: center;
-  width: 3.125rem;
-  height: 3.125rem;
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
 }
+
+.benefits-section__content {
+  display: flex;
+  flex-direction: column;
+}
+
 .benefits-section__title {
-  color: #12462b;
-  font-family: "Lato", sans-serif;
-  font-size: 0.75rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--coffee-benefits-title-color);
+  margin-bottom: 4px;
 }
 
 .benefits-section__text {
-  color: #8b9b93;
   font-family: "Lato", sans-serif;
-  font-size: 0.875rem;
+  font-size: 14px;
+  color: var(--coffee-benefits-text-color);
 }
 
+@media (min-width: 600px) {
+  .benefits-section__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 32px;
+  }
+}
+
+@media (min-width: 992px) {
+  .benefits-section__list {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}

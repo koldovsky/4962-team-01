@@ -1,28 +1,115 @@
 /* by Viktoriia Hryvniak */
-:root {
-  --color-bg-section: #fdfdfd;
-  --color-card-1-bg: #fdfdfd;
-  --color-card-2-bg: #f8fffc;
-  --color-card-3-bg: #fff7fa;
-
-  --color-border: #f9cee1;
-  --color-title: #12462b;
-  --color-text: #8b9b93;
-  --color-accent-1: ;
-  --color-accent-2: #1f4d3a;
-  --color-accent-3: #e27db0;
+.coffee-facts {
+  display: grid;
+  gap: 24px;
+  padding: 40px 16px;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  align-items: stretch;
+  width: 100%;
+  max-width: none;
 }
 
+.coffee-facts__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 16px;
+  border: 10px solid var(--coffee-facts-color-frame);
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+.coffee-facts__card:nth-child(1) {
+  background-color: var(--coffee-facts-color-bg-1);
+}
+
+.coffee-facts__card:nth-child(2) {
+  background-color: var(--coffee-facts-color-bg-2);
+}
+
+.coffee-facts__card:nth-child(3) {
+  background-color: var(--coffee-facts-color-bg-3);
+}
+
+.coffee-facts__card:nth-child(1) .coffee-facts__divider {
+  background-color: var(--coffee-facts-divider-1);
+}
+
+.coffee-facts__card:nth-child(2) .coffee-facts__divider {
+  background-color: var(--coffee-facts-divider-2);
+}
+
+.coffee-facts__card:nth-child(3) .coffee-facts__divider {
+  background-color: var(--coffee-facts-divider-3);
+}
+
+.coffee-facts__image-wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.coffee-facts__image {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
 
 .coffee-facts__title {
-  color: var(--color-title);
   font-family: "Oswald", sans-serif;
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--coffee-facts-color-title);
+  margin-bottom: 8px;
+  min-height: 48px;
+}
+
+.coffee-facts__divider {
+  width: 60px;
+  height: 4px;
+  background-color: var(--coffee-facts-color-frame);
+  margin-bottom: 16px;
 }
 
 .coffee-facts__text {
-  color: var(--color-text);
   font-family: "Lato", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--coffee-facts-color-text);
+  margin-top: auto;
+  width: 100%;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+}
+
+@media (min-width: 490px) and (max-width: 969px) {
+  .coffee-facts {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 64px 24px;
+  }
+}
+
+@media (min-width: 970px) {
+  .coffee-facts {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 489px) {
+  .coffee-facts {
+    grid-template-columns: 1fr;
+    padding: 24px 12px;
+    box-sizing: border-box;
+  }
 }

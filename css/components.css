@@ -10,3 +10,24 @@
   padding: 2% 2.5%;
   display: inline-block;
 } /* Yevhen Pyrih */
+
+.button--arrow-nav {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.button--product-add-to-cart {
+  margin-top: 8px;
+  padding: 18px 40px;
+  font-family: Lato, sans-serif;
+  font-size: 16.5px;
+  font-weight: 650;
+  background-color: var(--primary-highlight-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
