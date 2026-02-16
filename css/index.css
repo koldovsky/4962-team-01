@@ -1,8 +1,13 @@
 @import url(global.css);
 @import url(components.css);
-@import url(index-modal-thank-you-partial.css); /* by Anna Fedorenko */
 @import url(global.header-nav.partial.css); /* by Yevhen Pyrih */
 @import url(index.header-hero.partial.css); /* by Yevhen Pyrih */
+@import url(index-modal-thank-you-partial.css); /* by Anna Fedorenko */
 @import url(index.section-coffee-benefits.partial.css); /* by Viktoriia Hryvniak */
 @import url(index.coffee-facts.partial.css); /* by Viktoriia Hryvniak */
-@import url(index.section-testimonials.partial.css) /* by Vadym Iskryzhytskyi */
+@import url(index.products.partial.css); /* by Liliia Dotsenko */
+@import url(index.subscription.partial.css); /* by Solomiia Kokoruz */
+@import url(index.section-testimonials.partial.css); /* by Vadym Iskryzhytskyi */
+@import url(index.news.partial.css); /* by Maksym Lohvinov */
+@import url(index.product-categories-section.partial.css); /* by Andrew Dehtiarov */
+@import url(index.section-coffee-experience.partial.css); /* by Artem Vasylkiv
