@@ -1,3 +1,11 @@
+/* Product title link styles */
+.product-card__title-link {
+  text-decoration: none;
+  color: inherit;
+}
+.product-card__title-link:visited {
+  color: inherit;
+}
 .products {
   max-width: 1200px;
   margin: 0 auto;
