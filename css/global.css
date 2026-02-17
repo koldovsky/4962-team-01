@@ -15,12 +15,8 @@
 
 :root {
   scroll-behavior: smooth;
-<<<<<<< HEAD
-  background-color: var(--background-color);
   --font-body: "Lato", sans-serif; /* Боді текст */
   --font-heading: "Oswald", sans-serif; /* Заголовки */
-=======
->>>>>>> e31665127428f7421d3f19b246f62397c5e007b6
   --background-color: #fcfcfc;
   --secondary-background-color: #ffffff;
   --primary-color: #f9cee1;
@@ -56,15 +52,16 @@ img {
   max-width: 100%;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-}
 
 body {
   font-family: var(--font-body); /* Глобальний шрифт для всього сайту */
   -webkit-font-smoothing: antialiased; /* Робить шрифт чіткішим на Mac */
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
 }
 
 h1,
