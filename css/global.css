@@ -48,7 +48,14 @@
   --coffee-benefits-title-color: #12462b;
   --coffee-benefits-text-color: #8b9b93;
   --modal-close-btn: #416b55;
+  --subscription-package-bg-gold: #fffdf3;
+  --subscription-package-bg-premium: #fff7fa;
+  --subscription-package-bg-eco: #f8fffc;
+  --input-bg-transparent: rgba(255, 255, 255, 0.12);
+  --input-border-transparent: rgba(255, 255, 255, 0.25);
+  --input-placeholder-color: rgba(255, 255, 255, 0.7);
 }
+
 
 img {
   display: block;
