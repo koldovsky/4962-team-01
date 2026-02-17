@@ -19,6 +19,7 @@
   --font-heading: "Oswald", sans-serif; /* Заголовки */
   --background-color: #fcfcfc;
   --secondary-background-color: #ffffff;
+  --white-color: #ffffff;
   --primary-color: #f9cee1;
   --main-color: #12462b;
   --header-link-color: #0b462899;
@@ -45,7 +46,15 @@
   --coffee-facts-divider-3: #e07faa;
   --coffee-benefits-title-color: #12462b;
   --coffee-benefits-text-color: #8b9b93;
+  --modal-close-btn: #416b55;
+  --subscription-package-bg-gold: #fffdf3;
+  --subscription-package-bg-premium: #fff7fa;
+  --subscription-package-bg-eco: #f8fffc;
+  --input-bg-transparent: rgba(255, 255, 255, 0.12);
+  --input-border-transparent: rgba(255, 255, 255, 0.25);
+  --input-placeholder-color: rgba(255, 255, 255, 0.7);
 }
+
 
 img {
   display: block;
@@ -64,7 +73,19 @@ html, body {
   background-color: var(--background-color);
 }
 
-h1,
+body {
+  font-family: var(--font-body); /* Глобальний шрифт для всього сайту */
+  -webkit-font-smoothing: antialiased; /* Робить шрифт чіткішим на Mac */
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+}
+
+/* h1,
 h2,
 h3,
 h4,
@@ -73,4 +94,4 @@ h6 {
   font-family: var(--font-heading);
   color: var(--main-color);
   -webkit-font-smoothing: antialiased;
-}
+} */
