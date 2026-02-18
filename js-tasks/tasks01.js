@@ -2,9 +2,8 @@
 
 const combat = (health, damage) => (damage > health ? 0 : health - damage);
 
-
 // Messi Goals https://www.codewars.com/kata/grasshopper-messi-goals-function/train/javascript
-function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+function goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return laLigaGoals + copaDelReyGoals + championsLeagueGoals;
 }
 
@@ -14,13 +13,13 @@ function makeNegative(num) {
 }
 
 // Game Move https://www.codewars.com/kata/grasshopper-terminal-game-move-function/train/javascript
-function move (position, roll) {
+function move(position, roll) {
   return position + roll * 2;
 }
 
 // Personalized Message https://www.codewars.com/kata/grasshopper-personalized-message/train/javascript
-function greet (name, owner) {
-  return name === owner ? 'Hello boss' : 'Hello guest';
+function greet(name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest";
 }
 
 // Keep Hydrated https://www.codewars.com/kata/keep-hydrated-1/train/javascript
@@ -29,6 +28,7 @@ function litres(time) {
 }
 
 // Opposites Attract https://www.codewars.com/kata/555086d53eac039a2a000083/train/javascript
-function lovefunc(flower1, flower2){
+function lovefunc(flower1, flower2) {
   return (flower1 + flower2) % 2 > 0 ? true : false;
 }
+
