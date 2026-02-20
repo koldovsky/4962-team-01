@@ -80,7 +80,7 @@ function DNAtoRNA(dna) {
 
 // MIN MAX
 // https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
-// читав про sort() або Math.max() та Math.min(), але вирішив зробити ручками
+// читав про sort() або Math.max() та Math.min(), але ручками цікавіше
 function max(list) {
   let isMax = list[0]; 
   list.forEach((num, i) => {
