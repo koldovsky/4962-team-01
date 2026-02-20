@@ -100,3 +100,12 @@ function min(list) {
   });
   return isMin;
 }
+
+// Andrew dehtiarov дві перші задачі
+function stringToArray(string){
+  return string.split(" ");
+}
+
+function DNAtoRNA(dna) {
+   return dna.replace(/T/g, "U");
+}
