@@ -58,3 +58,45 @@ function isDivisible(n, x, y) {
   return n % x === 0 && n % y === 0;
 }
 // =====
+
+// Stas R.
+// https://www.codewars.com/kata/convert-a-string-to-an-array/train/javascript
+function stringToArray(string) {
+  return string.split(" ");
+}
+
+//https://www.codewars.com/kata/dna-to-rna-conversion/train/javascript
+function DNAtoRNA(dna) {
+  let strToArr = dna.split("");
+
+  strToArr.forEach((char, i) => {
+    if (char === "T") {
+      strToArr[i] = "U";
+    }
+  });
+  return console.log(strToArr.join(""));
+} // знаю про replaceAll() але вирішив зробити так, щоб потренуватися з масивами
+
+
+// MIN MAX
+// https://www.codewars.com/kata/577a98a6ae28071780000989/train/javascript
+// читав про sort() або Math.max() та Math.min(), але вирішив зробити ручками
+function max(list) {
+  let isMax = list[0]; 
+  list.forEach((num, i) => {
+    if (num > isMax) {
+      isMax = num;
+    }
+  });
+  return isMax;
+}
+
+function min(list) {
+  let isMin = list[0]; 
+  list.forEach((num, i) => {
+    if (num < isMin) {
+      isMin = num;
+    }
+  });
+  return isMin;
+}
