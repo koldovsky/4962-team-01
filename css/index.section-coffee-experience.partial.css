@@ -4,6 +4,12 @@
   flex-direction: column;
   /* текст зверху, картинка знизу */
   gap: 30px;
+  padding: 24px;
+  padding-top: 96px;
+  padding-bottom: 0px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .coffee-experience__title {
@@ -52,8 +58,8 @@
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #e85a9b;
-  /* рожевий */
+  color: var(--primary-highlight-color)
+    /* рожевий */
 }
 
 .coffee-experience__features__text {
@@ -73,8 +79,7 @@
 .coffee-experience__chess-pattern {
   width: 100%;
   /* під ширину секції */
-  max-width: 100%;
-  /* не більше батьківського контейнера */
+  max-width: 1200px;
   min-height: 32px;
   /* фіксована висота */
   overflow: hidden;
@@ -83,6 +88,9 @@
   /* відступ від контенту */
   padding: 0 24px;
   /* підлаштовує під padding inner */
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .coffee-experience__chess-pattern img {
@@ -92,12 +100,6 @@
   /* фіксована висота */
   object-fit: cover;
   /* обрізає зайве, щоб не виходило за межі */
-}
-
-.coffee-experience__inner {
-  padding: 24px;
-  padding-top: 64px;
-  padding-bottom: 0px;
 }
 
 .coffee-experience__button {
@@ -126,6 +128,7 @@
     align-items: stretch;
     /* однакова висота */
     gap: 48px;
+    padding-top: 56px;
   }
 
   .coffee-experience__content {
