@@ -121,6 +121,9 @@ class Dog extends Animal {
 
 
 
+
+//=======================================
+
 // by Stas R.
 
 // https://www.codewars.com/kata/geometry-basics-circle-circumference-in-2d/train/javascript
@@ -175,3 +178,4 @@ class Dog extends Animal {
     return `Hello ${this.master}! Woof!`;
   }
 }
+
