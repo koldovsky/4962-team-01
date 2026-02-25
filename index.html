@@ -44,19 +44,11 @@
     ></script>
   </head>
 
-  <body>
-    <header class="header">
-      <nav
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="global.header-nav.partial.html"
-      ></nav>
-      <div
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.header-hero.partial.html"
-      ></div>
-    </header>
+<body>
+  <header class="header">
+    <nav data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.header-nav.partial.html"></nav>
+    <div data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.header-hero.partial.html"></div>
+  </header>
 
     <main class="main">
 <<<<<<< HEAD
@@ -113,22 +105,13 @@
         data-hx-get="index.news.partial.html"
       ></section>
 
-      <section
-        data-hx-trigger="load"
-        data-hx-swap="outerHTML"
-        data-hx-get="index.section-testimonials.partial.html"
-      ></section>
-    </main>
+    <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.section-testimonials.partial.html">
+    </section>
+  </main>
 
-    <footer
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="global.footer.partial.html"
-    ></footer>
-    <section
-      data-hx-trigger="load"
-      data-hx-swap="outerHTML"
-      data-hx-get="index.modal-thank-you.partial.html"
-    ></section>
-  </body>
+  <footer data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="global.footer.partial.html"></footer>
+  <section data-hx-trigger="load" data-hx-swap="outerHTML" data-hx-get="index.modal-thank-you.partial.html"></section>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
