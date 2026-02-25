@@ -10,3 +10,105 @@
   padding: 2% 2.5%;
   display: inline-block;
 } /* Yevhen Pyrih */
+
+.button--arrow-nav {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Product Card Component */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 16px;
+  position: relative;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: var(--accent-green);
+  color: var(--white-color);
+  z-index: 2;
+}
+
+.product-card__image-link {
+  display: block;
+  text-decoration: none;
+}
+
+.product-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-card__title {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.product-card__title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card__title-link:visited {
+  color: inherit;
+}
+
+.product-card__price {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.product-card__button {
+  margin-top: 8px;
+  padding: 18px 40px;
+  font-family: Lato, sans-serif;
+  font-size: 16.5px;
+  font-weight: 650;
+  background-color: var(--primary-highlight-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Pagination Dot Component */
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--subtitle-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.4;
+}
+
+.pagination-dot--active {
+  opacity: 1;
+}
+
+
