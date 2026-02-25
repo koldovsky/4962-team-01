@@ -1,6 +1,6 @@
 function init() {
   import("./product-page.tabs.js");
-  import("./product-page.galley.js");
+  import("./product-page.gallery.js");
 }
 
 const totalPartials = document.querySelectorAll(
@@ -8,7 +8,7 @@ const totalPartials = document.querySelectorAll(
 ).length;
 let loadedPartialsCount = 0;
 
-document.body.addEventListener("htmx:afterOnLoad", () => {
+document.body.addEventListener("htmx:afterSettle", () => {
   loadedPartialsCount++;
   if (loadedPartialsCount === totalPartials) init();
 });
