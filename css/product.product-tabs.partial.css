@@ -1,0 +1,10 @@
+.tabs__pane {
+  display: none;
+}
+.tabs__pane--active {
+  display: block;
+}
+
+.tabs__nav-button--active {
+  background-color: red;
+}
