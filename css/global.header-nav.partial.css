@@ -203,3 +203,28 @@
         }
     }
 }
+
+
+.header__burger{
+    border: none;
+    color: var(--secondary-background-color);
+}
+
+.header__nav-mobile{
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+
+    background-color: var(--secondary-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-mobile__is-active {
+    @media(max-width: 1023px){
+        height: calc(100vh - 99.28px);
+        visibility: visible;
+        transition: height 2s ease 0.5s, visibility 0s linear 0s;
+    }
+}
