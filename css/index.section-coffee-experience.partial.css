@@ -7,7 +7,7 @@
   padding: 24px;
   padding-top: 96px;
   padding-bottom: 0px;
-  max-width: 1200px;
+  max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -172,9 +172,24 @@
 
   .coffee-experience__inner,
   .coffee-experience__chess-pattern {
-    padding: 70px;
-    padding-top: 64px;
+    padding: 15px;
+    padding-top: 15px;
     /* можна залишити окремо, якщо потрібно */
     padding-bottom: 0;
+    gap: 30px;
+  }
+
+  .coffee-experience__inner {
+    justify-content: center;
+    /* вирівняти по центру */
+  }
+
+  .coffee-experience__content,
+  .coffee-experience__media {
+    flex: 0 0 570px;
+    /* фіксована ширина 570px */
+    max-width: 570px;
+    height: 624px;
+    /* фіксована висота */
   }
 }
