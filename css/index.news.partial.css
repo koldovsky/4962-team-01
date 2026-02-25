@@ -1,9 +1,19 @@
 .news__title {
   color: #12462b;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 34px;
+  font-weight: 700px;
+  text-transform: uppercase;
 }
 
 .news__title_green {
   color: #e07faa;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card__date {
@@ -33,4 +43,22 @@
   font-family: "Lato", sans-serif;
   font-size: 19px;
   font-weight: 400;
+  text-align: center;
+}
+
+.news__list {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.news__item {
+  max-width: 320px;
+  width: 100%;
+}
+
+.card_image {
+  width: 200;
+  height: 200;
 }
