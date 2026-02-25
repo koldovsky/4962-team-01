@@ -15,6 +15,7 @@
 
 :root {
   scroll-behavior: smooth;
+  background-color: var(--background-color);
   --font-body: "Lato", sans-serif; /* Боді текст */
   --font-heading: "Oswald", sans-serif; /* Заголовки */
   --background-color: #fcfcfc;
@@ -22,6 +23,7 @@
   --white-color: #ffffff;
   --primary-color: #f9cee1;
   --main-color: #12462b;
+  --product-category-text-color: #2c6346;
   --header-link-color: #0b462899;
   --primary-highlight-color: #e07faa;
   --secondary-highlight-color: #fef9dc;
@@ -61,29 +63,16 @@ img {
   max-width: 100%;
 }
 
-
-body {
-  font-family: var(--font-body); /* Глобальний шрифт для всього сайту */
-  -webkit-font-smoothing: antialiased; /* Робить шрифт чіткішим на Mac */
-}
-
-html, 
-body {
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-}
-
-body {
-  font-family: var(--font-body); /* Глобальний шрифт для всього сайту */
-  -webkit-font-smoothing: antialiased; /* Робить шрифт чіткішим на Mac */
-}
-
 html,
 body {
   width: 100%;
   height: 100%;
   background-color: var(--background-color);
+}
+
+body {
+  font-family: var(--font-body); /* Глобальний шрифт для всього сайту */
+  -webkit-font-smoothing: antialiased; /* Робить шрифт чіткішим на Mac */
 }
 
 /* h1,

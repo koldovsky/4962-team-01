@@ -1,6 +1,5 @@
 function init() {
-  import("./product-page.tabs.js");
-  import("./product-page.gallery.js");
+  import("./global.header_nav.js");
 }
 
 const totalPartials = document.querySelectorAll(
@@ -12,5 +11,3 @@ document.body.addEventListener("htmx:afterOnLoad", () => {
   loadedPartialsCount++;
   if (loadedPartialsCount === totalPartials) init();
 });
-
-console.log("Main product page script loaded"); // перевірка, що скрипт завантажився

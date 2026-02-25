@@ -3,7 +3,7 @@
     <button
       type="button"
       class="tabs__nav-button tabs__nav-button--active"
-      data-tab-target="#des-tab"
+      data-target="description"
       role="tab"
       aria-selected="true"
       aria-controls="des-tab"
@@ -13,7 +13,7 @@
     <button
       type="button"
       class="tabs__nav-button"
-      data-tab-target="#det-tab"
+      data-target="details"
       role="tab"
       aria-selected="false"
       aria-controls="det-tab"
@@ -23,7 +23,12 @@
   </nav>
 
   <div class="tabs__content">
-    <div id="des-tab" class="tabs__pane tabs__pane--active" role="tabpanel">
+    <div
+      id="des-tab"
+      class="tabs__pane tabs__pane--active"
+      role="tabpanel"
+      data-pane="description"
+    >
       <p class="tabs__description">
         A vibrant, citrusy coffee with delicate floral aromas and a crisp,
         tea-like body, perfect for slow mornings and pour-over lovers. Grown at
@@ -32,7 +37,7 @@
       </p>
     </div>
 
-    <div id="det-tab" class="tabs__pane" role="tabpanel">
+    <div id="det-tab" class="tabs__pane" role="tabpanel" data-pane="details">
       <table class="tabs__table" summary="Coffee product specifications">
         <thead>
           <tr>
