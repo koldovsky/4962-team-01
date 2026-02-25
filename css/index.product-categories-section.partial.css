@@ -41,7 +41,7 @@
        }
 
        h2.active {
-           transform: translateY(-3px);
+           transform: translateY(-1px);
        }
 
        strong>span.span-4-lil-dot {
