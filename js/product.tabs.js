@@ -1,12 +1,12 @@
-// Не потрібно слухати жодних подій —
+// Не потрібно слухати жодних подій
 // цей файл імпортується тільки після того,
 // як product-page.js підтвердив що всі partials завантажені
 const tabButtons = document.querySelectorAll(".tabs__nav-button");
 const tabContents = document.querySelectorAll(".tabs__pane");
 
 console.log("Tabs script loaded");
-console.log(`Tab buttons: ${tabButtons.length}`); // буде 2 ✅
-console.log(`Tab contents: ${tabContents.length}`); // буде 2 ✅
+console.log(`Tab buttons: ${tabButtons.length}`);
+console.log(`Tab contents: ${tabContents.length}`);
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
