@@ -2,207 +2,216 @@
    COFFEE EXPERIENCE SECTION
 ================================== */
 
-.coffee-experience__inner {
-  display: flex;
-  flex-direction: column;
-  /* mobile: текст зверху */
-  justify-content: space-between;
-  gap: 30px;
-  padding: 24px;
-  padding-top: 96px;
-  padding-bottom: 0;
-  max-width: 1180px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ===============================
-   CONTENT
-================================== */
-
-.coffee-experience__content {
-  background-color: var(--secondary-highlight-color);
-  padding: 24px;
-}
-
-.coffee-experience__title {
-  color: var(--main-color);
-  font-family: "Oswald", sans-serif;
-  font-size: 34px;
-  font-weight: 700;
-}
-
-.coffee-experience__title--dot {
-  color: var(--main-color);
-}
-
-.coffee-experience__accent {
-  color: var(--primary-highlight-color);
-}
-
-.coffee-experience__lead {
-  color: var(--subtitle-color);
-  font-family: "Lato", sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.coffee-experience__text {
-  color: var(--subtitle-color);
-  font-size: 17px;
-  font-weight: 400;
-}
-
-/* ===============================
-   FEATURES LIST
-================================== */
-
-.coffee-experience__features {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.coffee-experience__features li {
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 20px;
-}
-
-.coffee-experience__features li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 20px;
-  color: var(--primary-highlight-color);
-}
-
-.coffee-experience__features__accent {
-  color: var(--main-color);
-  font-style: italic;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.coffee-experience__features__text {
-  color: var(--subtitle-color);
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-/* ===============================
-   BUTTON
-================================== */
-
-.coffee-experience__button {
-  background-color: var(--primary-highlight-color);
-  color: #fff;
-  font: 16.5px Lato, sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 15px 40px;
-  display: inline-block;
-}
-
-/* ===============================
-   MEDIA
-================================== */
-
-.coffee-experience__media {
-  display: flex;
-  overflow: hidden;
-}
-
-.coffee-experience__media img {
-  width: 100%;
-  min-height: 297px;
-  display: block;
-  object-fit: cover;
-}
-
-/* ===============================
-   CHESS PATTERN
-================================== */
-
-.coffee-experience__chess-pattern {
-  width: 100%;
-  max-width: 1180px;
-  min-height: 32px;
-  overflow: hidden;
-  margin: 45px auto 0;
-  padding: 24px;
-}
-
-.coffee-experience__chess-pattern img {
-  width: 100%;
-  min-height: 32px;
-  object-fit: cover;
-}
-
-/* ===============================
-   TABLET 768px+
-================================== */
-
-@media (min-width: 768px) {
+.coffee-experience {
   .coffee-experience__inner {
-    flex-direction: row;
-    align-items: stretch;
-    padding-top: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 24px;
+    padding-top: 96px;
+    padding-bottom: 0;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ===============================
+     CONTENT
+  ================================== */
+
+  .coffee-experience__content {
+    background-color: var(--secondary-highlight-color);
+    padding: 24px;
   }
 
   .coffee-experience__title {
-    font-size: 41px;
+    color: var(--main-color);
+    font-family: "Oswald", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .coffee-experience__title--dot {
+    color: var(--main-color);
+  }
+
+  .coffee-experience__accent {
+    color: var(--primary-highlight-color);
   }
 
   .coffee-experience__lead {
-    font-size: 19px;
+    color: var(--subtitle-color);
+    font-family: "Lato", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
   }
 
-  .coffee-experience__content,
+  .coffee-experience__text {
+    color: var(--subtitle-color);
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  /* ===============================
+     FEATURES LIST
+  ================================== */
+
+  .coffee-experience__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .coffee-experience__features li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+  }
+
+  .coffee-experience__features li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 20px;
+    color: var(--primary-highlight-color);
+  }
+
+  .coffee-experience__features__accent {
+    color: var(--main-color);
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .coffee-experience__features__text {
+    color: var(--subtitle-color);
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* ===============================
+     BUTTON
+  ================================== */
+
+  .coffee-experience__button {
+    background-color: var(--primary-highlight-color);
+    color: #fff;
+    font: 16.5px Lato, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 15px 40px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .coffee-experience__button:hover {
+    background-color: var(--coffee-benefits-title-color);
+  }
+
+  .coffee-experience__button:focus-visible {
+    outline: 3px solid var(--primary-highlight-color);
+    outline-offset: 3px;
+  }
+
+  /* ===============================
+     MEDIA
+  ================================== */
+
   .coffee-experience__media {
-    flex: 1 1 337px;
-    /* базова 337px */
-    min-width: 337px;
-    /* не менше 337px */
-  }
-
-  .coffee-experience__content {
-    padding: 50px;
+    display: flex;
+    overflow: hidden;
   }
 
   .coffee-experience__media img {
     width: 100%;
-    height: 100%;
+    min-height: 297px;
+    display: block;
     object-fit: cover;
   }
 
+  /* ===============================
+     CHESS PATTERN
+  ================================== */
+
   .coffee-experience__chess-pattern {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 32px;
+    overflow: hidden;
+    margin: 45px auto 0;
     padding: 24px;
   }
-}
 
-/* ===============================
-   DESKTOP 1200px+
-================================== */
-
-@media (min-width: 1200px) {
-  .coffee-experience__inner {
-    justify-content: center;
-    padding: 64px 15px 0;
+  .coffee-experience__chess-pattern img {
+    width: 100%;
+    min-height: 32px;
+    object-fit: cover;
   }
 
-  .coffee-experience__content,
-  .coffee-experience__media {
-    flex: 0 0 570px;
-    max-width: 570px;
-    height: 624px;
-    box-sizing: border-box;
+  /* ===============================
+     TABLET 768px+
+  ================================== */
+
+  @media (min-width: 768px) {
+    .coffee-experience__inner {
+      flex-direction: row;
+      align-items: stretch;
+      padding-top: 56px;
+    }
+
+    .coffee-experience__title {
+      font-size: 41px;
+    }
+
+    .coffee-experience__lead {
+      font-size: 19px;
+    }
+
+    .coffee-experience__content,
+    .coffee-experience__media {
+      flex: 1 1 337px;
+      min-width: 337px;
+    }
+
+    .coffee-experience__content {
+      padding: 50px;
+    }
+
+    .coffee-experience__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .coffee-experience__chess-pattern {
+      padding: 24px;
+    }
   }
 
-  .coffee-experience__chess-pattern {
-    padding: 0;
+  /* ===============================
+     DESKTOP 1200px+
+  ================================== */
+
+  @media (min-width: 1200px) {
+    .coffee-experience__inner {
+      justify-content: center;
+      padding: 64px 15px 0;
+    }
+
+    .coffee-experience__content,
+    .coffee-experience__media {
+      flex: 0 0 570px;
+      max-width: 570px;
+      height: 624px;
+      box-sizing: border-box;
+    }
+
+    .coffee-experience__chess-pattern {
+      padding: 0;
+    }
   }
 }
