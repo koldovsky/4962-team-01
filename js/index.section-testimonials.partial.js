@@ -1,7 +1,4 @@
-const testimonialsSection = document.querySelector('.testimonials__carousel-track')
-const nextButton = document.querySelector('.testimonials__carousel-next');
-const prevButton = document.querySelector('.testimonials__button--right');
-let currentSlideIndex = 0;
+const testimonialsTrack = document.querySelector(".testimonials__carousel-track");
 
 const testimonials = [
   {
@@ -30,9 +27,10 @@ const testimonials = [
   },
 ]
 
-function renderTestimonials(testimonials) {
+function renderTestimonials(items) {
   const testimonialsHTML = [];
-  for (const testimonial of testimonials) {
+
+  for (const testimonial of items) {
     const testimonialHTML = `
       <li class="testimonials__carousel-slide">
             <div class="testimonials__testimonial">
@@ -80,7 +78,92 @@ function renderTestimonials(testimonials) {
     `;
     testimonialsHTML.push(testimonialHTML);
   }
-  testimonialsSection.innerHTML = testimonialsHTML.join('');
+  testimonialsTrack.innerHTML = testimonialsHTML.join("");
 }
 
 renderTestimonials(testimonials);
+
+function initTestimonialsCarousel() {
+  const carousel = testimonialsTrack.closest(".testimonials__carousel");
+  if (!carousel || carousel.dataset.carouselInitialized === "true") return;
+
+  const trackContainer = carousel.querySelector(
+    ".testimonials__carousel-track-container",
+  );
+  const prevButton = carousel.querySelector(".testimonials__button--left");
+  const nextButton = carousel.querySelector(".testimonials__button--right");
+
+  if (!trackContainer || !prevButton || !nextButton) return;
+
+  carousel.dataset.carouselInitialized = "true";
+  testimonialsTrack.style.transition = "transform 300ms ease";
+  testimonialsTrack.style.willChange = "transform";
+
+  let currentSlideIndex = 0;
+
+  function getSlides() {
+    return Array.from(
+      testimonialsTrack.querySelectorAll(".testimonials__carousel-slide"),
+    );
+  }
+
+  function getGap() {
+    const trackStyles = window.getComputedStyle(testimonialsTrack);
+    const rawGap = trackStyles.columnGap || trackStyles.gap || "0";
+    const parsedGap = Number.parseFloat(rawGap);
+    return Number.isNaN(parsedGap) ? 0 : parsedGap;
+  }
+
+  function getVisibleSlidesCount() {
+    const slides = getSlides();
+    if (!slides.length) return 1;
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    if (!slideWidth) return 1;
+
+    const containerWidth = trackContainer.getBoundingClientRect().width;
+    const visible = Math.round(containerWidth / slideWidth);
+
+    return Math.max(1, visible);
+  }
+
+  function updateCarousel() {
+    const slides = getSlides();
+    if (!slides.length) return;
+
+    const visibleSlidesCount = getVisibleSlidesCount();
+    const maxSlideIndex = Math.max(0, slides.length - visibleSlidesCount);
+    currentSlideIndex = Math.min(currentSlideIndex, maxSlideIndex);
+
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    const offset = currentSlideIndex * (slideWidth + getGap());
+
+    testimonialsTrack.style.transform = `translateX(-${offset}px)`;
+    prevButton.disabled = currentSlideIndex === 0;
+    nextButton.disabled = currentSlideIndex >= maxSlideIndex;
+  }
+
+  prevButton.addEventListener("click", () => {
+    currentSlideIndex = Math.max(0, currentSlideIndex - 1);
+    updateCarousel();
+  });
+
+  nextButton.addEventListener("click", () => {
+    const maxSlideIndex = Math.max(0, getSlides().length - getVisibleSlidesCount());
+    currentSlideIndex = Math.min(maxSlideIndex, currentSlideIndex + 1);
+    updateCarousel();
+  });
+
+  let resizeRafId = 0;
+  window.addEventListener("resize", () => {
+    if (resizeRafId) cancelAnimationFrame(resizeRafId);
+    resizeRafId = requestAnimationFrame(() => {
+      resizeRafId = 0;
+      updateCarousel();
+    });
+  });
+
+  updateCarousel();
+}
+
+initTestimonialsCarousel();
