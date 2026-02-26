@@ -123,14 +123,6 @@
                 color: rgb(234, 228, 190);
               }
 
-              .testimonials__testimonial-divider-1 path,
-              .testimonials__testimonial-divider-2 path,
-              .testimonials__testimonial-divider-3 path {
-                fill: none;
-                stroke: currentColor;
-                stroke-width: 4px;
-              }
-
               .testimonials__testimonial-divider-1,
               .testimonials__testimonial-divider-2,
               .testimonials__testimonial-divider-3 {
@@ -138,12 +130,16 @@
                 place-items: center;
                 margin: 0.2rem 0 1rem;
                 opacity: 0.9;
-              }
 
-              .testimonials__testimonial-divider-1 svg,
-              .testimonials__testimonial-divider-2 svg,
-              .testimonials__testimonial-divider-3 svg {
-                display: block;
+                path {
+                  fill: none;
+                  stroke: currentColor;
+                  stroke-width: 4px;
+                }
+
+                svg {
+                  display: block;
+                }
               }
 
               .testimonials__testimonial-divider-1 {
