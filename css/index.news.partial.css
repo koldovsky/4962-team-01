@@ -2,8 +2,8 @@
   color: #12462b;
   text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 34px;
-  font-weight: 700px;
+  font-size: 44px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -11,7 +11,7 @@
   color: #e07faa;
   text-align: center;
   font-family: "Oswald", sans-serif;
-  font-size: 34px;
+  font-size: 44px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -20,15 +20,20 @@
   color: #8b9b93;
   font-family: "Lato", sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .card__title {
   color: #12462b;
   font-family: "Oswald", sans-serif;
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 26px;
+  font-weight: 500;
   line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .card__text {
@@ -36,6 +41,7 @@
   font-family: "Lato", sans-serif;
   font-size: 17px;
   font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .news__description {
@@ -44,6 +50,8 @@
   font-size: 19px;
   font-weight: 400;
   text-align: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
 }
 
 .news__list {
@@ -54,11 +62,61 @@
 }
 
 .news__item {
-  max-width: 320px;
+  max-width: 360px;
   width: 100%;
 }
 
-.card_image {
-  width: 200;
+.card__image {
+  width: 100%;
   height: 200;
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card_arrow {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  padding: 0 !important
+}
+
+.card__arrow {
+  display: flex;                  
+  align-items: center;            
+  justify-content: center;         
+  width: 50px;                     
+  height: 50px;
+  border-radius: 50%;              
+  color: #12462b;  
+  margin-top: auto;                
+}
+
+
+.card__arrow-svg {
+  width: 26px;                     
+  height: 26px;
+}
+
+
+.card_arrow_color_pink {
+  background-color: #f9cee1;
+}
+
+.card_arrow_color_yellow {
+  background-color: #fef9dc;
+}
+
+.card__arrow_color_green { 
+  background-color: rgba(18, 70, 43, 0.4);
 }
