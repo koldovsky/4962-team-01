@@ -117,8 +117,13 @@
     </div>
 
     <div class="subscription__form-group">
-      <input type="text" class="subscription__input" placeholder="Your Pack" required />
-    </div>
+  <select class="subscription__input subscription__select" required>
+    <option value="" disabled selected>Choose your pack*</option>
+    <option value="ESSENTIAL PACK">ESSENTIAL PACK</option>
+    <option value="EXPLORER PACK">EXPLORER PACK</option>
+    <option value="CONNOISSEUR PACK">CONNOISSEUR PACK</option>
+  </select>
+</div>
 
     <button type="submit" class="subscription__button">
       Get My Coffee
@@ -137,5 +142,4 @@
       class="stripe-img"
     />
   </div>
-<script src="js/subscription.partial.js" defer></script>
 </section>

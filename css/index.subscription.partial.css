@@ -118,8 +118,9 @@
 }
 
 .subscription__details {
-  border-bottom: 1px solid var(--subtitle-color);
-  text-align: center;
+  overflow: hidden;
+  transition: border-color 0.3s;
+  display: block;
 }
 
 .subscription__details-summary {
@@ -134,10 +135,6 @@
   font-weight: 700;
   cursor: pointer;
   position: relative;
-}
-
-.subscription__details-summary::-webkit-details-marker {
-  display: none;
 }
 
 .subscription__details-summary::after {
@@ -243,6 +240,16 @@
   font-weight: 600;
 }
 
+.subscription__select {
+  cursor: pointer;
+  color: var(--white-color); 
+}
+
+.subscription__select option {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
 .subscription__input::placeholder {
   color: var(--input-placeholder-color);
 }
@@ -270,14 +277,12 @@
   .subscription__container {
     max-width: 740px;
   }
-
   .subscription__packages {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
   }
-
   .subscription__package {
     flex: 0 1 calc(50% - 16px);
   }
@@ -289,11 +294,9 @@
     flex-wrap: wrap;
     gap: 15px;
   }
-
   .subscription__form-group {
     flex: 0 1 calc(50% - 8px);
   }
-
   .subscription__button {
     flex: 0 1 calc(50% - 8px);
     margin-top: 0;
@@ -306,11 +309,9 @@
     flex-wrap: nowrap;
     margin-bottom: 20px;
   }
-
   .subscription__form-group {
     flex: 1;
   }
-
   .subscription__button {
     width: 100%;
     max-width: none;
@@ -321,7 +322,6 @@
   .subscription__container {
     max-width: 1110px;
   }
-
   .subscription__packages {
     flex-direction: row;
     gap: 30px;
@@ -329,33 +329,26 @@
     justify-content: center;
     min-height: 200px;
   }
-
   .subscription__package {
     flex: 1;
   }
-
   .subscription__package-image-thumb {
     height: 400px;
   }
-
   .subscription__package-content {
     margin-top: -60px;
   }
-
   .subscription__form {
     padding: 60px 40px;
   }
-
   .subscription__form-inputs {
     flex-direction: row;
     align-items: stretch;
     gap: 15px;
   }
-
   .subscription__form-group {
     flex: 1;
   }
-
   .subscription__input,
   .subscription__button {
     padding: 16px 20px;
