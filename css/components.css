@@ -7,8 +7,12 @@
   font-weight: 650;
   text-decoration: none;
   border-radius: 10px;
-  padding: 2% 2.5%;
-  display: inline-block;
+  /* padding: 2% 2.5%; */
+  width: 155.03px;
+  height: 53.81px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 } /* Yevhen Pyrih */
 
 .button--arrow-nav {

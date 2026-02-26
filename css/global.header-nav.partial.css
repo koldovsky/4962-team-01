@@ -2,13 +2,13 @@
     width: 100%;
     height: auto;
 
-    .header__contact-wrapper{
+    .header__contact-wrapper {
         background-color: var(--primary-color);
         display: flex;
         justify-content: center;
     }
 
-    .header__main-wrapper{
+    .header__main-wrapper {
         background-color: var(--secondary-background-color);
         display: flex;
         justify-content: center;
@@ -77,41 +77,18 @@
                 .border_2yy {
                     fill: var(--primary-highlight-color);
                 }
+
+                &:hover {
+
+                    .outer_bDW,
+                    .border_2yy {
+                        fill: var(--primary-highlight-color-focus);
+                        transition: fill calc(var(--transition-speed)/2) ease-out var(--transition-delay);
+                    }
+                }
             }
         }
     }
-
-    /* .header__main {
-        justify-content: space-between;
-        background-color: var(--secondary-background-color);
-        width: 100%;
-        height: auto;
-
-        .header__menu {
-            list-style: none;
-            display: none;
-            flex-wrap: wrap;
-            flex-direction: row;
-            align-items: center;
-            gap: 0px 25px;
-
-            @media (min-width: 1024px) {
-                display: flex;
-                padding: 0 15px;
-                margin: 30px 25px;
-                visibility: visible;
-                width: auto;
-                height: auto;
-            }
-
-            .header__menu-link {
-                font: 15px Lato, sans-serif;
-                font-weight: bold;
-                color: var(--header-link-color);
-                text-decoration: none;
-            }
-        }
-    } */
 
     .header__main {
         display: flex;
@@ -205,12 +182,12 @@
 }
 
 
-.header__burger{
+.header__burger {
     border: none;
     color: var(--secondary-background-color);
 }
 
-.header__nav-mobile{
+.header__nav-mobile {
     height: 0;
     overflow: hidden;
     visibility: hidden;
@@ -219,12 +196,79 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    transition: height var(--transition-speed) ease var(--transition-delay), visibility 0s linear 0s;
+
+    .header__mobile {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 25px 0;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+
+
+        .header__mobile-link {
+            font: 17px Lato, sans-serif;
+            font-weight: bold;
+            color: var(--header-link-color);
+            text-decoration: none;
+            padding: 0;
+        }
+    }
+
+    .header__mobile-contact-info {
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .header__mobile-contact-item {
+            display: inline-block;
+            margin: 15px 3px;
+            font-style: normal;
+            font: 15px Lato, sans-serif;
+            font-weight: bold;
+            color: var(--main-color);
+
+            .header__mobile-contact-link {
+                text-decoration: none;
+                color: var(--header-link-color);
+            }
+        }
+    }
+
+    .header__mobile-social {
+        padding: 5px 0;
+
+        .header__mobile-social-link {
+            display: inline-block;
+            margin: 0 10px;
+
+            .outer_bDW,
+            .border_2yy {
+                fill: var(--primary-highlight-color);
+            }
+
+            &:hover {
+
+                .outer_bDW,
+                .border_2yy {
+                    fill: var(--primary-highlight-color-focus);
+                    transition: fill calc(var(--transition-speed)/2) ease-out var(--transition-delay);
+                }
+            }
+        }
+    }
+
 }
 
 .nav-mobile__is-active {
-    @media(max-width: 1023px){
+    @media(max-width: 1023px) {
         height: calc(100vh - 99.28px);
         visibility: visible;
-        transition: height 2s ease 0.5s, visibility 0s linear 0s;
+        transition: height var(--transition-speed) ease var(--transition-delay), visibility 0s linear 0s;
     }
 }

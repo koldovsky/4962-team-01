@@ -26,6 +26,7 @@
   --product-category-text-color: #2c6346;
   --header-link-color: #0b462899;
   --primary-highlight-color: #e07faa;
+  --primary-highlight-color-focus: #d4538d;
   --secondary-highlight-color: #fef9dc;
   --link-color: #4e72d0;
   --black-border-color: #000000;
@@ -55,6 +56,8 @@
   --input-bg-transparent: rgba(255, 255, 255, 0.12);
   --input-border-transparent: rgba(255, 255, 255, 0.25);
   --input-placeholder-color: rgba(255, 255, 255, 0.7);
+  --transition-speed: 0.5s;
+  --transition-delay: 0.1s;
 }
 
 
