@@ -103,7 +103,7 @@
   font-weight: 700;
   text-decoration: none;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 15px 40px;
   display: inline-block;
 }
 
@@ -118,7 +118,7 @@
 
 .coffee-experience__media img {
   width: 100%;
-  height: auto;
+  min-height: 297px;
   display: block;
   object-fit: cover;
 }
@@ -133,6 +133,7 @@
   min-height: 32px;
   overflow: hidden;
   margin: 45px auto 0;
+  padding: 24px;
 }
 
 .coffee-experience__chess-pattern img {
@@ -177,6 +178,10 @@
     height: 100%;
     object-fit: cover;
   }
+
+  .coffee-experience__chess-pattern {
+    padding: 24px;
+  }
 }
 
 /* ===============================
@@ -195,5 +200,9 @@
     max-width: 570px;
     height: 624px;
     box-sizing: border-box;
+  }
+
+  .coffee-experience__chess-pattern {
+    padding: 0;
   }
 }
