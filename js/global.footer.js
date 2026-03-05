@@ -9,22 +9,71 @@ function updateClock() {
 
 function updateGreeting(hours) {
   const greetingElement = document.getElementById("footer-greeting");
-  if (!greetingElement) return;
+  const factElement = document.getElementById("footer-fact");
+  const factContainer = document.getElementById("footer-fact-container");
+  if (!greetingElement || !factElement || !factContainer) return;
 
-  let greeting;
+  const timeGreetings = {
+    morning: "Good morning! Start your day with our coffee.",
+    afternoon: "Good afternoon! Time for a coffee break?",
+    evening: "Good evening! Enjoy a cozy cup of coffee.",
+    night: "Good night! Dreaming of tomorrow's coffee?"
+  };
+
+  const facts = [
+    "Coffee is actually a fruit.",
+    "Beethoven was a coffee lover.",
+    "Coffee can help you live longer.",
+    "Brazil grows the most coffee in the world.",
+    "The most expensive coffee is made from cat poop."
+  ];
+
+  let currentGreeting;
   if (hours >= 5 && hours < 12) {
-    greeting = "Good morning! Start your day with our coffee.";
+    currentGreeting = timeGreetings.morning;
   } else if (hours >= 12 && hours < 18) {
-    greeting = "Good afternoon! Time for a coffee break?";
+    currentGreeting = timeGreetings.afternoon;
   } else if (hours >= 18 && hours < 22) {
-    greeting = "Good evening! Enjoy a cozy cup of coffee.";
+    currentGreeting = timeGreetings.evening;
   } else {
-    greeting = "Good night! Dreaming of tomorrow's coffee?";
+    currentGreeting = timeGreetings.night;
   }
 
-  if (greetingElement.innerText !== greeting) {
-    greetingElement.innerText = greeting;
+  // Update Greeting if changed
+  if (greetingElement.innerText !== currentGreeting) {
+    greetingElement.innerText = currentGreeting;
   }
+
+  // Rotate fact every minute
+  const minute = new Date().getMinutes();
+  const factIndex = minute % facts.length;
+  const currentFact = facts[factIndex];
+  const factPrefix = "Did you know? ";
+
+  if (factElement.innerText !== factPrefix + currentFact) {
+    factContainer.style.opacity = 0;
+    setTimeout(() => {
+      factElement.innerText = factPrefix + currentFact;
+      factContainer.style.opacity = 1;
+    }, 400);
+  }
+}
+
+function initCopyEmail() {
+  const copyBtn = document.getElementById("copy-email-btn");
+  const emailText = document.getElementById("footer-email")?.innerText;
+  const tooltip = copyBtn?.querySelector(".footer__tooltip");
+
+  if (!copyBtn || !emailText || !tooltip) return;
+
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(emailText).then(() => {
+      tooltip.classList.add("footer__tooltip--visible");
+      setTimeout(() => {
+        tooltip.classList.remove("footer__tooltip--visible");
+      }, 2000);
+    });
+  });
 }
 
 function initBackToTop() {
@@ -50,3 +99,4 @@ function initBackToTop() {
 setInterval(updateClock, 1000);
 updateClock();
 initBackToTop();
+initCopyEmail();

@@ -8,8 +8,11 @@
         </a>
 
         <div class="footer__description">
-          <p id="footer-greeting">Freshly roasted coffee, delivered with care.</p>
-          <p>Taste the difference in every cup.</p>
+          <p id="footer-greeting" class="footer__greeting">Freshly roasted coffee, delivered with care.</p>
+          <div id="footer-fact-container" class="footer__fact-container">
+            <span class="footer__fact-icon">☕</span>
+            <span id="footer-fact" class="footer__fact">Did you know? Coffee is actually a fruit.</span>
+          </div>
         </div>
 
         <nav class="footer__social" aria-label="Social media">
@@ -121,17 +124,25 @@
           </a>
         </p>
 
-        <p class="footer__contact-item">
+        <p class="footer__contact-item footer__contact-item--email">
           <span class="footer__label">Email:</span>
-          <a class="footer__contact-link" href="mailto:brew.coffee@email.com">
-            brew.coffee@email.com
-          </a>
+          <span class="footer__email-wrapper">
+            <a class="footer__contact-link" href="mailto:brew.coffee@email.com" id="footer-email">
+              brew.coffee@email.com
+            </a>
+            <button id="copy-email-btn" class="footer__copy-btn" aria-label="Copy email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span class="footer__tooltip">Copy!</span>
+            </button>
+          </span>
         </p>
 
         <p class="footer__contact-item">
           <span class="footer__label">Address:</span>
-          170 S 1st St, Brooklyn,<br />
-          NY 11211, USA
+          <span class="footer__address-text">170 S 1st St, Brooklyn, NY 11211, USA</span>
         </p>
       </address>
     </section>
@@ -142,8 +153,7 @@
       <div class="footer__clock-container">
         <span id="footer-clock" class="footer__clock">00:00:00</span>
       </div>
-      <p class="footer__copyright">&copy; 2026 Brew Coffee</p>
-      <p class="footer__rights">All rights reserved</p>
+      <p class="footer__copyright">&copy; 2026 Brew Coffee. All rights reserved</p>
       <button id="back-to-top" class="footer__back-to-top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 15l-6-6-6 6"/>
