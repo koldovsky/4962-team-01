@@ -39,12 +39,10 @@ function updateGreeting(hours) {
     currentGreeting = timeGreetings.night;
   }
 
-  // Update Greeting if changed
   if (greetingElement.innerText !== currentGreeting) {
     greetingElement.innerText = currentGreeting;
   }
 
-  // Rotate fact every minute
   const minute = new Date().getMinutes();
   const factIndex = minute % facts.length;
   const currentFact = facts[factIndex];
