@@ -1,0 +1,120 @@
+.news__title {
+  color: rgb(18, 70, 43);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.news__title_green {
+  color: rgb(224, 127, 170);
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card__date {
+  color: rgb(139, 155, 147);
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.card__title {
+  color: rgb(18, 70, 43);
+  font-family: "Oswald", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.card__text {
+  color: rgb(139, 155, 147);
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.news__description {
+  color: rgb(139, 155, 147);
+  font-family: "Lato", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.news__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.news__item {
+  max-width: 360px;
+  width: 100%;
+}
+
+.card__image {
+  width: 100%;
+  height: 200;
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card_arrow {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  padding: 0 !important;
+}
+
+.card__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: rgb(18, 70, 43);
+  margin-top: auto;
+}
+
+.card__arrow-svg {
+  width: 26px;
+  height: 26px;
+}
+
+.card_arrow_color_pink {
+  background-color: rgb(249, 206, 225);
+}
+
+.card_arrow_color_yellow {
+  background-color: rgb(254, 249, 220);
+}
+
+.card__arrow_color_green {
+  background-color: rgba(18, 70, 43, 0.4);
+}

@@ -1,3 +1,12 @@
+/* Liliia Dotsenko */
+.product-card__title-link {
+  text-decoration: none;
+  color: inherit;
+}
+.product-card__title-link:visited {
+  color: inherit;
+}
+
 .products {
   max-width: 1200px;
   margin: 0 auto;
@@ -18,7 +27,7 @@
       color: var(--main-color);
 
       .products__title-accent {
-        display: block;
+        display: inline;
         line-height: 1.1;
         color: var(--primary-highlight-color);
 
@@ -37,14 +46,54 @@
     }
   }
 
+  /* MOBILE FIRST */
   .products-selection {
     margin: 40px 0;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 100%;
+
+    .products-selection__controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .products-selection__sort {
+      color: var(--subtitle-color);
+      font-family: Lato, sans-serif;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--secondary-text-color);
+      background: transparent;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      max-width: 100%;
+    }
+
     .products-selection__tabs {
       display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      gap: 12px;
+
+      flex-wrap: wrap;
+      max-width: 100%;
+      overflow: visible;
     }
 
     .products-selection__tab {
@@ -55,13 +104,17 @@
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
+
       background: none;
       border: none;
       border-bottom: 2px solid transparent;
+
       color: var(--subtitle-color);
       cursor: pointer;
+
       white-space: nowrap;
-      flex-shrink: 0;
+      max-width: 220px;
+      text-align: center;
     }
 
     .products-selection__tab--active {
@@ -75,11 +128,22 @@
     position: relative;
 
     .products__panel {
+      opacity: 0;
+      transform: translateY(6px);
+      pointer-events: none;
+      transition:
+        opacity 320ms ease,
+        transform 320ms ease;
+    }
+
+    .products__panel[hidden] {
       display: none;
     }
 
     .products__panel--active {
-      display: block;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
     }
 
     .products__list {
@@ -161,20 +225,22 @@
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
   .products {
-    .products__title-accent {
-      display: inline;
-    }
-
     .products-selection {
-      display: flex;
+      flex-direction: row;
       justify-content: center;
+      align-items: center;
 
       .products-selection__tabs {
-        justify-content: center;
-        flex-wrap: wrap;
-        overflow-x: visible;
+        order: 0;
+        flex-wrap: nowrap;
+        gap: 16px;
+      }
+
+      .products-selection__controls {
+        order: 1;
+        margin-left: 8px;
       }
     }
 
@@ -186,13 +252,8 @@
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   .products {
-    .products__title {
-      font-size: 48px;
-      font-weight: 700;
-    }
-
     .products__content {
       .products__list {
         grid-template-columns: repeat(4, 1fr);

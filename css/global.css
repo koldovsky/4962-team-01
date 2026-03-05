@@ -7,18 +7,26 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* background: #fcfcfc; */
 }
+
+/* * {
+  outline: 1px solid red;
+} */
 
 :root {
   scroll-behavior: smooth;
   background-color: var(--background-color);
+  --font-body: "Lato", sans-serif; /* Боді текст */
+  --font-heading: "Oswald", sans-serif; /* Заголовки */
   --background-color: #fcfcfc;
+  --secondary-background-color: #ffffff;
   --white-color: #ffffff;
   --primary-color: #f9cee1;
   --main-color: #12462b;
+  --product-category-text-color: #2c6346;
   --header-link-color: #0b462899;
   --primary-highlight-color: #e07faa;
+  --primary-highlight-color-focus: #d4538d;
   --secondary-highlight-color: #fef9dc;
   --link-color: #4e72d0;
   --black-border-color: #000000;
@@ -28,6 +36,8 @@
   --space-sm: 12px;
   --space-lg: 24px;
   --secondary-text-color: #8b9b93;
+  --green-border-color: #e2e9e5;
+  --line-color: #f2f2f2;
   --coffee-facts-color-frame: #f9cee1;
   --coffee-facts-color-title: #1f4d3c;
   --coffee-facts-color-text: #6b7a78;
@@ -39,24 +49,42 @@
   --coffee-facts-divider-3: #e07faa;
   --coffee-benefits-title-color: #12462b;
   --coffee-benefits-text-color: #8b9b93;
+  --modal-close-btn: #416b55;
+  --subscription-package-bg-gold: #fffdf3;
+  --subscription-package-bg-premium: #fff7fa;
+  --subscription-package-bg-eco: #f8fffc;
+  --input-bg-transparent: rgba(255, 255, 255, 0.12);
+  --input-border-transparent: rgba(255, 255, 255, 0.25);
+  --input-placeholder-color: rgba(255, 255, 255, 0.7);
+  --transition-speed: 0.5s;
+  --transition-delay: 0.1s;
 }
+
 
 img {
   display: block;
   max-width: 100%;
 }
 
-/* html, body {
+html,
+body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-} Додав щоб позбавитися зайвого місця на мобільних девайсах */
-
-.button--arrow-nav {
-  background: none;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
+  background-color: var(--background-color);
 }
+
+body {
+  font-family: var(--font-body); /* Глобальний шрифт для всього сайту */
+  -webkit-font-smoothing: antialiased; /* Робить шрифт чіткішим на Mac */
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--main-color);
+  -webkit-font-smoothing: antialiased;
+} */
