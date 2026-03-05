@@ -29,7 +29,7 @@
 .card__title {
   color: rgb(18, 70, 43);
   font-family: "Oswald", sans-serif;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.2;
   text-transform: uppercase;
@@ -48,7 +48,7 @@
   color: rgb(139, 155, 147);
   font-family: "Lato", sans-serif;
   font-size: 19px;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 50px;
@@ -68,7 +68,7 @@
 
 .card__image {
   width: 100%;
-  height: 200;
+  height: 200px;
   object-fit: cover;
   margin-bottom: 25px;
 }
@@ -117,4 +117,25 @@
 
 .card__arrow_color_green {
   background-color: rgba(18, 70, 43, 0.4);
+}
+
+.news-section {
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  
+  .news__title,
+  .news__title_green {
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .news__description {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
 }
