@@ -12,44 +12,13 @@
     </p>
   </div>
   <div class="products-selection">
-    <div class="products-selection__tabs" role="tablist">
-      <button
-        class="products-selection__tab products-selection__tab--active"
-        type="button"
-        id="products-tab-single-origin-coffee"
-        role="tab"
-        aria-selected="true"
-        aria-controls="single-origin-coffee"
-        tabindex="0"
-      >
-        Single-Origin Coffee
-      </button>
-      <button
-        class="products-selection__tab"
-        type="button"
-        id="products-tab-signature-blends"
-        role="tab"
-        aria-selected="false"
-        aria-controls="signature-blends"
-        tabindex="-1"
-      >
-        Signature Blends
-      </button>
-      <button
-        class="products-selection__tab"
-        type="button"
-        id="products-tab-decaf-specialty"
-        role="tab"
-        aria-selected="false"
-        aria-controls="decaf-specialty"
-        tabindex="-1"
-      >
-        Decaf &amp; Specialty
-      </button>
-    </div>
     <div class="products-selection__controls">
       <label class="visually-hidden" for="products-sort">Sort products</label>
-      <select id="products-sort" class="products-selection__sort" aria-label="Sort products">
+      <select
+        id="products-sort"
+        class="products-selection__sort"
+        aria-label="Sort products"
+      >
         <option value="default">Sort: Default</option>
         <option value="price-asc">Price: Low → High</option>
         <option value="price-desc">Price: High → Low</option>
@@ -57,6 +26,48 @@
         <option value="name-desc">Name: Z → A</option>
       </select>
     </div>
+
+    <ul class="products-selection__tabs" role="tablist">
+      <li role="presentation">
+        <button
+          class="products-selection__tab products-selection__tab--active"
+          type="button"
+          id="products-tab-single-origin-coffee"
+          role="tab"
+          aria-selected="true"
+          aria-controls="single-origin-coffee"
+          tabindex="0"
+        >
+          Single-Origin Coffee
+        </button>
+      </li>
+      <li role="presentation">
+        <button
+          class="products-selection__tab"
+          type="button"
+          id="products-tab-signature-blends"
+          role="tab"
+          aria-selected="false"
+          aria-controls="signature-blends"
+          tabindex="-1"
+        >
+          Signature Blends
+        </button>
+      </li>
+      <li role="presentation">
+        <button
+          class="products-selection__tab"
+          type="button"
+          id="products-tab-decaf-specialty"
+          role="tab"
+          aria-selected="false"
+          aria-controls="decaf-specialty"
+          tabindex="-1"
+        >
+          Decaf &amp; Specialty
+        </button>
+      </li>
+    </ul>
   </div>
   <div class="products__content">
     <!-- TAB: SINGLE-ORIGIN COFFEE -->

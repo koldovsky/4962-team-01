@@ -1,85 +1,198 @@
-(() => {
-  const q = s => document.querySelector(s);
-  const qa = s => Array.from(document.querySelectorAll(s));
-  const wrap = q('.products-selection__tabs');
-  const tabs = qa('.products-selection__tab');
-  const panels = qa('.products__panel');
-  const sort = q('#products-sort');
-  if (!wrap || !tabs.length || tabs.length !== panels.length) return;
+/* Liliia Dotsenko */
+function initProductTabs() {
+  const tabsContainer =
+    document.querySelector(".products-selection__tabs") || document;
 
-  const TRANS = (() => {
-    const v = (getComputedStyle(document.documentElement).getPropertyValue('--products-tab-trans') || '').trim();
-    if (!v) return 320;
-    return v.endsWith('ms') ? parseFloat(v) : v.endsWith('s') ? parseFloat(v) * 1000 : parseFloat(v) || 320;
-  })();
+  const tabs = Array.from(
+    document.querySelectorAll(".products-selection__tab"),
+  );
+  const panels = Array.from(document.querySelectorAll(".products__panel"));
+  const sortSelect = document.querySelector("#products-sort");
 
-  const reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  tabs.forEach((t, i) => (t.dataset.i = i));
+  if (!tabs.length || !panels.length) return;
 
-  panels.forEach(panel => {
-    const list = panel.querySelector('.products__list');
-    if (!list) return;
-    Array.from(list.children).forEach((li, idx) => li.matches && li.matches('.products__item') && (li.dataset.orig = idx));
+  tabs.forEach((tab, index) => {
+    tab.dataset.index = String(index);
   });
 
-  const price = el => Number((el.querySelector('.product-card__price')?.textContent || '').replace(',', '.').replace(/[^\d.]/g, '')) || 0;
-  const name = el => (el.querySelector('.product-card__title-link')?.textContent || '').trim().toLowerCase();
+  panels.forEach((panel) => {
+    const productsList = panel.querySelector(".products__list");
+    if (!productsList) return;
 
-  const animate = panel => {
-    if (reduced) return;
-    const items = Array.from(panel.querySelectorAll('.products__item'));
-    items.forEach((el, i) => {
-      el.style.transition = `opacity 260ms ease ${i * 70}ms, transform 260ms ease ${i * 70}ms`;
-      el.style.opacity = '0'; el.style.transform = 'translateY(10px)';
+    Array.from(productsList.children).forEach((child, originalIndex) => {
+      if (child.matches?.(".products__item")) {
+        child.dataset.orig = String(originalIndex);
+      }
     });
-    requestAnimationFrame(() => items.forEach(el => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }));
-  };
+  });
 
-  const sortPanel = idx => {
-    const list = panels[idx]?.querySelector('.products__list');
-    if (!list) return;
-    const items = Array.from(list.children).filter(n => n.matches && n.matches('.products__item'));
-    const mode = (sort?.value) || localStorage.getItem('productsSort') || 'default';
-    if (mode === 'default') { items.sort((a, b) => (a.dataset.orig || 0) - (b.dataset.orig || 0)).forEach(n => list.appendChild(n)); return animate(panels[idx]); }
-    const key = mode.startsWith('price') ? price : name;
-    const dir = mode.endsWith('desc') ? -1 : 1;
-    items.sort((a, b) => { const A = key(a), B = key(b); return A === B ? 0 : ((A > B ? 1 : -1) * dir); }).forEach(n => list.appendChild(n));
-    animate(panels[idx]);
-  };
+  function getActiveTabIndex() {
+    const activeIndex = tabs.findIndex((tab) =>
+      tab.classList.contains("products-selection__tab--active"),
+    );
+    return activeIndex >= 0 ? activeIndex : 0;
+  }
 
-  const activate = i => {
-    tabs.forEach((t, idx) => {
-      const on = idx === i;
-      t.classList.toggle('products-selection__tab--active', on);
-      t.setAttribute('aria-selected', String(on));
-      t.tabIndex = on ? 0 : -1;
-      const p = panels[idx];
-      if (on) { p.hidden = false; p.classList.add('products__panel--active'); }
-      else { p.classList.remove('products__panel--active'); setTimeout(() => p.hidden = true, reduced ? 0 : TRANS + 20); }
+  function getSortMode() {
+    return (
+      sortSelect?.value || localStorage.getItem("productsSort") || "default"
+    );
+  }
+
+  function getPriceValue(productItem) {
+    const rawText =
+      productItem.querySelector(".product-card__price")?.textContent || "";
+    const normalized = rawText.replace(",", ".").replace(/[^\d.]/g, "");
+    const parsed = parseFloat(normalized);
+    return Number.isFinite(parsed) ? parsed : 0;
+  }
+
+  function getNameValue(productItem) {
+    return (
+      productItem.querySelector(".product-card__title-link")?.textContent || ""
+    )
+      .trim()
+      .toLowerCase();
+  }
+
+  function sortPanelItems(panelIndex) {
+    const panel = panels[panelIndex];
+    if (!panel) return;
+
+    const productsList = panel.querySelector(".products__list");
+    if (!productsList) return;
+
+    const productItems = Array.from(productsList.children).filter((child) =>
+      child.matches?.(".products__item"),
+    );
+
+    const sortMode = getSortMode();
+
+    if (sortMode === "default") {
+      productItems
+        .sort(
+          (firstItem, secondItem) =>
+            Number(firstItem.dataset.orig || 0) -
+            Number(secondItem.dataset.orig || 0),
+        )
+        .forEach((productItem) => productsList.appendChild(productItem));
+      return;
+    }
+
+    const sortDirection = sortMode.endsWith("desc") ? -1 : 1;
+    const isPriceSort = sortMode.startsWith("price");
+
+    productItems
+      .sort((firstItem, secondItem) => {
+        if (isPriceSort) {
+          const firstValue = getPriceValue(firstItem);
+          const secondValue = getPriceValue(secondItem);
+          if (firstValue === secondValue) return 0;
+          return (firstValue > secondValue ? 1 : -1) * sortDirection;
+        }
+
+        const firstValue = getNameValue(firstItem);
+        const secondValue = getNameValue(secondItem);
+        if (firstValue === secondValue) return 0;
+        return (firstValue > secondValue ? 1 : -1) * sortDirection;
+      })
+      .forEach((productItem) => productsList.appendChild(productItem));
+  }
+
+  function activateTab(tabIndex) {
+    tabs.forEach((tab, i) => {
+      const isActive = i === tabIndex;
+
+      tab.classList.toggle("products-selection__tab--active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+      tab.tabIndex = isActive ? 0 : -1;
+
+      const panel = panels[i];
+      if (!panel) return;
+
+      panel.hidden = !isActive;
+      panel.classList.toggle("products__panel--active", isActive);
     });
-    localStorage.setItem('productsActiveTab', String(i));
-    sortPanel(i);
-  };
 
-  wrap.addEventListener('click', e => { const t = e.target.closest('.products-selection__tab'); if (t) activate(Number(t.dataset.i)); });
+    localStorage.setItem("productsActiveTab", String(tabIndex));
+    sortPanelItems(tabIndex);
+  }
 
-  wrap.addEventListener('keydown', e => {
-    const t = e.target.closest('.products-selection__tab'); if (!t) return; const i = Number(t.dataset.i);
-    switch (e.key) {
-      case 'ArrowRight': e.preventDefault(); { const n = (i + 1) % tabs.length; tabs[n].focus(); activate(n); } break;
-      case 'ArrowLeft': e.preventDefault(); { const n = (i - 1 + tabs.length) % tabs.length; tabs[n].focus(); activate(n); } break;
-      case 'Home': e.preventDefault(); tabs[0].focus(); activate(0); break;
-      case 'End': e.preventDefault(); tabs[tabs.length - 1].focus(); activate(tabs.length - 1); break;
-      case ' ': case 'Enter': e.preventDefault(); activate(i); break;
+  tabsContainer.addEventListener("click", (event) => {
+    const clickedTab = event.target.closest(".products-selection__tab");
+    if (!clickedTab?.dataset.index) return;
+
+    const tabIndex = Number(clickedTab.dataset.index);
+    if (!Number.isFinite(tabIndex)) return;
+
+    activateTab(tabIndex);
+  });
+
+  tabsContainer.addEventListener("keydown", (event) => {
+    const focusedTab = event.target.closest(".products-selection__tab");
+    if (!focusedTab?.dataset.index) return;
+
+    const currentIndex = Number(focusedTab.dataset.index);
+    if (!Number.isFinite(currentIndex)) return;
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      const nextIndex = (currentIndex + 1) % tabs.length;
+      tabs[nextIndex].focus();
+      activateTab(nextIndex);
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      const previousIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+      tabs[previousIndex].focus();
+      activateTab(previousIndex);
+      return;
+    }
+
+    if (event.key === "Home") {
+      event.preventDefault();
+      tabs[0].focus();
+      activateTab(0);
+      return;
+    }
+
+    if (event.key === "End") {
+      event.preventDefault();
+      const lastIndex = tabs.length - 1;
+      tabs[lastIndex].focus();
+      activateTab(lastIndex);
+      return;
+    }
+
+    if (event.key === " " || event.key === "Enter") {
+      event.preventDefault();
+      activateTab(currentIndex);
     }
   });
 
-  if (sort) {
-    sort.value = localStorage.getItem('productsSort') || sort.value || 'default';
-    sort.addEventListener('change', () => { localStorage.setItem('productsSort', sort.value); const ai = tabs.findIndex(t => t.classList.contains('products-selection__tab--active')); sortPanel(ai >= 0 ? ai : 0); });
+  if (sortSelect) {
+    sortSelect.value = getSortMode();
+
+    sortSelect.addEventListener("change", () => {
+      localStorage.setItem("productsSort", sortSelect.value);
+      sortPanelItems(getActiveTabIndex());
+    });
   }
 
-  const stored = Number(localStorage.getItem('productsActiveTab'));
-  const initial = Number.isFinite(stored) && stored >= 0 && stored < tabs.length ? stored : Math.max(0, tabs.findIndex(t => t.classList.contains('products-selection__tab--active')));
-  activate(initial >= 0 ? initial : 0);
-})();
+  const storedIndex = Number(localStorage.getItem("productsActiveTab"));
+  const hasValidStoredIndex =
+    Number.isFinite(storedIndex) &&
+    storedIndex >= 0 &&
+    storedIndex < tabs.length;
+
+  const initialIndex = hasValidStoredIndex ? storedIndex : getActiveTabIndex();
+  activateTab(initialIndex);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initProductTabs);
+} else {
+  initProductTabs();
+}
