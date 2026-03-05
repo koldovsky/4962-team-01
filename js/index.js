@@ -1,5 +1,6 @@
 function init() {
   import("./global.header_nav.js");
+  import("./global.footer.js");
   import("./index.section-testimonials.partial.js");
   import("./products-section-tabs.js");
   import("./index.subscription.partial.js");
