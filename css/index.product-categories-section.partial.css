@@ -98,10 +98,12 @@
        margin-top: 0px;
    }
 
-   img {
-       max-width: 420px;
-       max-height: 420px;
-   }
+   .product-category-card img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
    .hidden-text.show {
        max-height: 500px;
        opacity: 1;
