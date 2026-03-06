@@ -4,18 +4,21 @@ const mobilePanel = document.querySelector(".header__nav-mobile");
 
 const mobileLinks = document.querySelectorAll(".header__mobile-link")
 
+if (burger && mobilePanel) {
+  burger.addEventListener("click", () => {
+    mobilePanel.classList.toggle("nav-mobile__is-active");
+    burger.classList.toggle("header__burger--active");
 
-burger.addEventListener("click", () => {
-  mobilePanel.classList.toggle("nav-mobile__is-active");
-
-  let documentOverflow = document.documentElement.style.overflow;
-  document.documentElement.style.overflow =
-    documentOverflow === "hidden" ? "auto" : "hidden";
-});
-
-for (const link of mobileLinks) {
-  link.addEventListener("click", () => {
-    document.documentElement.style.overflow = "auto";
-    mobilePanel.classList.remove("nav-mobile__is-active");
+    let documentOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow =
+      documentOverflow === "hidden" ? "auto" : "hidden";
   });
+
+  for (const link of mobileLinks) {
+    link.addEventListener("click", () => {
+      document.documentElement.style.overflow = "auto";
+      mobilePanel.classList.remove("nav-mobile__is-active");
+      burger.classList.remove("header__burger--active");
+    });
+  }
 }

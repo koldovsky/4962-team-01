@@ -63,7 +63,7 @@
 }
 
 .footer__fact-container {
-    background: rgba(212, 115, 161, 0.1); /* Subtle pinkish tint from brand palette */
+    background: rgba(212, 115, 161, 0.1);
     border-left: 3px solid var(--footer-accent);
     padding: 10px 14px;
     margin-bottom: 24px;
@@ -264,10 +264,6 @@
 .footer__back-to-top svg {
     width: 24px;
     height: 24px;
-}
-
-#footer-greeting {
-    /* Removed redundant transition as it's now in .footer__greeting */
 }
 
 

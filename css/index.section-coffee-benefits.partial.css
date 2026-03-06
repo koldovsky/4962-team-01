@@ -1,18 +1,40 @@
 /* by Viktoriia Hryvniak */
 .benefits-section {
-  padding: 48px 16px;
+  padding: 40px 0;
+}
+
+:root {
+  --container-width: 1200px;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
 .chess-pattern {
   width: 100%;
-  overflow: hidden;
-  margin-bottom: 48px;
+  height: 30px;
+  margin-bottom: 24px;
+
+  background-image: url("../img/coffee-pattern.svg");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
 }
 
-.chess-pattern__image {
-  display: block;
-  width: 100%;
-  height: auto;
+@media (min-width: 768px) {
+  .chess-pattern {
+    height: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .chess-pattern {
+    height: 60px;
+    margin-bottom: 40px;
+  }
 }
 
 .benefits-section__list {

@@ -1,4 +1,5 @@
 function init() {
+  import("./global.header_nav.js");
   import("./product-page.tabs.js");
   import("./product-page.gallery.js");
 }

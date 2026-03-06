@@ -60,17 +60,29 @@
         font-weight: 750;
         margin: 3vh 0;
       }
+
+      .button {
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: var(--tertiary-highlight-color);
+          color: var(--main-color);
+        }
+      }
     }
 
     .header__hero-image {
+      display: block;
       max-width: 100%;
       height: auto;
       width: 100%;
+      object-fit: contain;
+      aspect-ratio: 585 / 528;
 
       @media (min-width: 768px) {
         transform: translateX(50%) scale(1.5);
         max-width: 50%;
-        height: 75%;
+        height: auto;
         width: auto;
         margin: 0 1vw;
       }
