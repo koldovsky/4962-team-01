@@ -5,6 +5,8 @@ function init() {
   import("./products-section-tabs.js");
   import("./index.subscription.partial.js");
   import("./index.hash-navigation.js");
+  import("./products-order.js");
+  import("./order.js");
 }
 
 const totalPartials = document.querySelectorAll(

@@ -1,5 +1,7 @@
 function init() {
   import("./global.header_nav.js");
+  // bring in code that reads selectedProduct from localStorage
+  import("./order.js");
 }
 
 const totalPartials = document.querySelectorAll(
