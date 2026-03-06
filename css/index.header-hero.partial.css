@@ -72,14 +72,17 @@
     }
 
     .header__hero-image {
+      display: block;
       max-width: 100%;
       height: auto;
       width: 100%;
+      object-fit: contain;
+      aspect-ratio: 585 / 528;
 
       @media (min-width: 768px) {
         transform: translateX(50%) scale(1.5);
         max-width: 50%;
-        height: 75%;
+        height: auto;
         width: auto;
         margin: 0 1vw;
       }
